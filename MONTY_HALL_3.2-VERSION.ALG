@@ -21,24 +21,14 @@ Var
         
         temp, apres, temp_logo, aleat_on: logico
 
-        log_1, log_2, log_3, log_4, log_5, log_6: caractere // partição da primeira parte da logo_monty_hall
-        log_7, log_8, log_9, log_10, log_11, log_12: caractere // partição da segunda parte da logo_monty_hall
-        
-        log_reg_1, log_reg_2, log_reg_3, log_reg_4, log_reg_5, log_reg_6, log_reg_7, log_reg_8: caractere // partição da logo_regras
-        
-        log_er_1, log_er_2, log_er_3, log_er_4, log_er_5, log_er_6, log_er_7, log_er_8: caractere // partição da logo_erro
-
-        pt_fec_cima, pt_fec_lado, pt_fec_baixo, pt_fec_esp, pt_fec_1, pt_fec_2, pt_fec_3: caractere // partições das portas fechadas
-        pt_abrt_bode_1, pt_abrt_bode_2, pt_abrt_bode_3, pt_abrt_bode_4, pt_abrt_bode_5, pt_abrt_bode_6, pt_abrt_bode_7, pt_abrt_bode_8, pt_abrt_bode_9, pt_abrt_bode_10: caractere // partição das portas com bodes
-        pt_abrt_carro_1, pt_abrt_carro_2, pt_abrt_carro_3, pt_abrt_carro_4, pt_abrt_carro_5, pt_abrt_carro_6, pt_abrt_carro_7, pt_abrt_carro_8, pt_abrt_carro_9, pt_abrt_carro_10: caractere // partição das portas com carros
 Inicio
         // CONFIGURAÇÃO:
         // 1_Temporizador está ligado?
-        temp <- verdadeiro
+        temp <- falso
         // 2_Modo apresentação está ligada?
-        apres <- verdadeiro
+        apres <- falso
         // 3_Temporizador da logo está ligado?
-        temp_logo <- verdadeiro
+        temp_logo <- falso
         // 4_Definir porta aleatóriamente?
         aleat_on <- verdadeiro
         // 5_Definir porta aleatóriamente está desligado, qual porta deseja que caia?
@@ -95,7 +85,7 @@ Inicio
            escreval()
 
            para xs de 48 ate 55 faca
-                escreva(notepad[xs])
+                escreval(notepad[xs])
            fimpara
            
            escreval()
@@ -114,66 +104,54 @@ Inicio
            fimse
            
            se (apres = verdadeiro) entao
-              escreval(log_reg_1)
-              escreval(log_reg_2)
-              escreval(log_reg_3)
-              escreval(log_reg_4)
-              escreval(log_reg_5)
-              escreval(log_reg_6)
-              escreval(log_reg_7)
-              escreval(log_reg_8)
+              para xs de 48 ate 55 faca
+                escreval(notepad[xs])
+              fimpara
            
               limpatela
            
-              escreval(log_reg_1)
-              escreval(log_reg_2)
-              escreval(log_reg_3)
-              escreval(log_reg_4)
+              para xs de 48 ate 52 faca
+                escreval(notepad[xs])
+              fimpara
               escreval()
               escreval()
-              escreval(log_reg_5)
-              escreval(log_reg_6)
-              escreval(log_reg_7)
-              escreval(log_reg_8)
+              para xs de 52 ate 55 faca
+                escreval(notepad[xs])
+              fimpara
            
               limpatela
            
-              escreval(log_reg_1)
-              escreval(log_reg_2)
-              escreval(log_reg_3)
-              escreval(log_reg_4)
+              para xs de 48 ate 52 faca
+                escreval(notepad[xs])
+              fimpara
               escreval()
               escreval()
               escreval()
               escreval()
-              escreval(log_reg_5)
-              escreval(log_reg_6)
-              escreval(log_reg_7)
-              escreval(log_reg_8)
+              para xs de 52 ate 55 faca
+                escreval(notepad[xs])
+              fimpara
            
               limpatela
            
-              escreval(log_reg_1)
-              escreval(log_reg_2)
-              escreval(log_reg_3)
-              escreval(log_reg_4)
+              para xs de 48 ate 52 faca
+                escreval(notepad[xs])
+              fimpara
               escreval()
               escreval()
               escreval()
               escreval()
               escreval()
               escreval()
-              escreval(log_reg_5)
-              escreval(log_reg_6)
-              escreval(log_reg_7)
-              escreval(log_reg_8)
+              para xs de 52 ate 55 faca
+                escreval(notepad[xs])
+              fimpara
            
               limpatela
            
-              escreval(log_reg_1)
-              escreval(log_reg_2)
-              escreval(log_reg_3)
-              escreval(log_reg_4)
+              para xs de 48 ate 52 faca
+                escreval(notepad[xs])
+              fimpara
               escreval()
               escreval()
               escreval()
@@ -182,10 +160,9 @@ Inicio
               escreval()
               escreval()
               escreval()
-              escreval(log_reg_5)
-              escreval(log_reg_6)
-              escreval(log_reg_7)
-              escreval(log_reg_8)
+              para xs de 52 ate 55 faca
+                escreval(notepad[xs])
+              fimpara
 
               limpatela
            fimse
@@ -195,10 +172,9 @@ Inicio
            fimse
            
            se (apres = verdadeiro) entao
-              escreval(log_reg_1)
-              escreval(log_reg_2)
-              escreval(log_reg_3)
-              escreval(log_reg_4)
+              para xs de 48 ate 52 faca
+                escreval(notepad[xs])
+              fimpara
            fimse
            
            se (temp = verdadeiro) entao
@@ -215,16 +191,16 @@ Inicio
            escreval("----------------------------------------------------------------")
 
            se (temp = verdadeiro) entao
-              timer 200
+              timer 70
            fimse
            
            se (apres = verdadeiro) entao
-              escreval(log_reg_5)
-              escreval(log_reg_6)
-              escreval(log_reg_7)
-              escreval(log_reg_8)
+              para xs de 52 ate 55 faca
+                escreval(notepad[xs])
+              fimpara
            fimse
            
+           escreval()
            escreval()
            escreval("                  *Para sair pressione F9*                      ")
 
@@ -241,21 +217,21 @@ Inicio
            timer 100
         fimse
         
-        escreval("          ",pt_fec_cima, pt_fec_cima, pt_fec_cima)
-        escreval("          ",pt_fec_lado, pt_fec_lado, pt_fec_lado)
-        escreval("          ",pt_fec_lado, pt_fec_lado, pt_fec_lado)
-        escreval("          ",pt_fec_lado, pt_fec_lado, pt_fec_lado)
-        escreval("          ",pt_fec_1, pt_fec_2, pt_fec_3)
-        escreval("          ",pt_fec_lado, pt_fec_lado, pt_fec_lado)
-        escreval("          ",pt_fec_lado, pt_fec_lado, pt_fec_lado)
-        escreval("          ",pt_fec_baixo, pt_fec_baixo, pt_fec_baixo)
+        escreval("          ",notepad[1], notepad[1], notepad[1])
+        escreval("          ",notepad[2], notepad[2], notepad[2])
+        escreval("          ",notepad[2], notepad[2], notepad[2])
+        escreval("          ",notepad[2], notepad[2], notepad[2])
+        escreval("          ",notepad[3], notepad[4], notepad[5])
+        escreval("          ",notepad[2], notepad[2], notepad[2])
+        escreval("          ",notepad[2], notepad[2], notepad[2])
+        escreval("          ",notepad[6], notepad[6], notepad[6])
         escreval()
         
         se (temp = verdadeiro) entao
            timer 0
         fimse
         
-        // fim da apresentaï¿½ï¿½o e hora de escolha da porta
+        // fim da apresentasentação e hora de escolha da porta
         escolha(num_one_car) // permite que dependendo de qual porta o carro esteja seja realizado aï¿½ï¿½es distintas
                     caso 1
                          port <- 1
@@ -264,7 +240,7 @@ Inicio
                          escreva("-> ")
                          leia(port_alt_one)
                          
-                         se (port_alt_one <> port) entao //se o nï¿½mero da porta escolhida for diferente da porta do carro
+                         se (port_alt_one <> port) entao //se o número da porta escolhida for diferente da porta do carro
                             repita
                                   aleatorio 1,3
                                   leia(num_two)
@@ -286,16 +262,16 @@ Inicio
                                   timer 120
                                fimse
 
-                               escreval("         ",pt_fec_cima, pt_fec_cima, pt_abrt_bode_1)
-                               escreval("         ",pt_fec_lado, pt_fec_lado, pt_abrt_bode_2)
-                               escreval("         ",pt_fec_lado, pt_fec_lado, pt_abrt_bode_3)
-                               escreval("         ",pt_fec_lado, pt_fec_lado, pt_abrt_bode_4)
-                               escreval("         ",pt_fec_1, pt_fec_2, pt_abrt_bode_5)
-                               escreval("         ",pt_fec_lado, pt_fec_lado, pt_abrt_bode_6)
-                               escreval("         ",pt_fec_lado, pt_fec_lado, pt_abrt_bode_7)
-                               escreval("         ",pt_fec_baixo, pt_fec_baixo, pt_abrt_bode_8)
-                               escreval("         ",pt_fec_esp, pt_fec_esp, pt_abrt_bode_9)
-                               escreval("         ",pt_fec_esp, pt_fec_esp, pt_abrt_bode_10)
+                               escreval("         ",notepad[1], notepad[1], notepad[8])
+                               escreval("         ",notepad[2], notepad[2], notepad[9])
+                               escreval("         ",notepad[2], notepad[2], notepad[10])
+                               escreval("         ",notepad[2], notepad[2], notepad[11])
+                               escreval("         ",notepad[3], notepad[4], notepad[12])
+                               escreval("         ",notepad[2], notepad[2], notepad[13])
+                               escreval("         ",notepad[2], notepad[2], notepad[14])
+                               escreval("         ",notepad[6], notepad[6], notepad[15])
+                               escreval("         ",notepad[7], notepad[7], notepad[16])
+                               escreval("         ",notepad[7], notepad[7], notepad[17])
                                escreval()
                                
                                se (temp = verdadeiro) entao
@@ -307,16 +283,16 @@ Inicio
                                        timer 120
                                     fimse
                                     
-                                    escreval("         ",pt_fec_cima, pt_abrt_bode_1, pt_fec_cima)
-                                    escreval("         ",pt_fec_lado, pt_abrt_bode_2, pt_fec_lado)
-                                    escreval("         ",pt_fec_lado, pt_abrt_bode_3, pt_fec_lado)
-                                    escreval("         ",pt_fec_lado, pt_abrt_bode_4, pt_fec_lado)
-                                    escreval("         ",pt_fec_1, pt_abrt_bode_5, pt_fec_3)
-                                    escreval("         ",pt_fec_lado, pt_abrt_bode_6, pt_fec_lado)
-                                    escreval("         ",pt_fec_lado, pt_abrt_bode_7, pt_fec_lado)
-                                    escreval("         ",pt_fec_baixo, pt_abrt_bode_8, pt_fec_baixo)
-                                    escreval("         ",pt_fec_esp, pt_abrt_bode_9, pt_fec_esp)
-                                    escreval("         ",pt_fec_esp, pt_abrt_bode_10, pt_fec_esp)
+                                    escreval("         ",notepad[1], notepad[8], notepad[1])
+                                    escreval("         ",notepad[2], notepad[9], notepad[2])
+                                    escreval("         ",notepad[2], notepad[10], notepad[2])
+                                    escreval("         ",notepad[2], notepad[11], notepad[2])
+                                    escreval("         ",notepad[3], notepad[12], notepad[5])
+                                    escreval("         ",notepad[2], notepad[13], notepad[2])
+                                    escreval("         ",notepad[2], notepad[14], notepad[2])
+                                    escreval("         ",notepad[6], notepad[15], notepad[6])
+                                    escreval("         ",notepad[7], notepad[16], notepad[7])
+                                    escreval("         ",notepad[7], notepad[17], notepad[7])
                                     escreval()
                                     se (temp = verdadeiro) entao
                                        timer 0
@@ -341,16 +317,16 @@ Inicio
                                timer 120
                             fimse
                             
-                            escreval("      ",pt_abrt_carro_1, pt_abrt_bode_1, pt_abrt_bode_1)
-                            escreval("      ",pt_abrt_carro_2, pt_abrt_bode_2, pt_abrt_bode_2)
-                            escreval("      ",pt_abrt_carro_3, pt_abrt_bode_3, pt_abrt_bode_3)
-                            escreval("      ",pt_abrt_carro_4, pt_abrt_bode_4, pt_abrt_bode_4)
-                            escreval("      ",pt_abrt_carro_5, pt_abrt_bode_5, pt_abrt_bode_5)
-                            escreval("      ",pt_abrt_carro_6, pt_abrt_bode_6, pt_abrt_bode_6)
-                            escreval("      ",pt_abrt_carro_7, pt_abrt_bode_7, pt_abrt_bode_7)
-                            escreval("      ",pt_abrt_carro_8, pt_abrt_bode_8, pt_abrt_bode_8)
-                            escreval("      ",pt_abrt_carro_9, pt_abrt_bode_9, pt_abrt_bode_9)
-                            escreval("      ",pt_abrt_carro_10, pt_abrt_bode_10, pt_abrt_bode_10)
+                            escreval("      ",notepad[18], notepad[8], notepad[8])
+                            escreval("      ",notepad[19], notepad[9], notepad[9])
+                            escreval("      ",notepad[20], notepad[10], notepad[10])
+                            escreval("      ",notepad[21], notepad[11], notepad[11])
+                            escreval("      ",notepad[22], notepad[12], notepad[12])
+                            escreval("      ",notepad[23], notepad[13], notepad[13])
+                            escreval("      ",notepad[24], notepad[14], notepad[14])
+                            escreval("      ",notepad[25], notepad[15], notepad[15])
+                            escreval("      ",notepad[26], notepad[16], notepad[16])
+                            escreval("      ",notepad[27], notepad[17], notepad[17])
                             escreval()
 
                             se (temp = verdadeiro) entao
@@ -395,16 +371,16 @@ Inicio
                                        timer 120
                                     fimse
                                     
-                                    escreval("         ",pt_fec_cima, pt_fec_cima, pt_abrt_bode_1)
-                                    escreval("         ",pt_fec_lado, pt_fec_lado, pt_abrt_bode_2)
-                                    escreval("         ",pt_fec_lado, pt_fec_lado, pt_abrt_bode_3)
-                                    escreval("         ",pt_fec_lado, pt_fec_lado, pt_abrt_bode_4)
-                                    escreval("         ",pt_fec_1, pt_fec_2, pt_abrt_bode_5)
-                                    escreval("         ",pt_fec_lado, pt_fec_lado, pt_abrt_bode_6)
-                                    escreval("         ",pt_fec_lado, pt_fec_lado, pt_abrt_bode_7)
-                                    escreval("         ",pt_fec_baixo, pt_fec_baixo, pt_abrt_bode_8)
-                                    escreval("         ",pt_fec_esp, pt_fec_esp, pt_abrt_bode_9)
-                                    escreval("         ",pt_fec_esp, pt_fec_esp, pt_abrt_bode_10)
+                                    escreval("         ",notepad[1], notepad[1], notepad[8])
+                                    escreval("         ",notepad[2], notepad[2], notepad[9])
+                                    escreval("         ",notepad[2], notepad[2], notepad[10])
+                                    escreval("         ",notepad[2], notepad[2], notepad[11])
+                                    escreval("         ",notepad[3], notepad[4], notepad[12])
+                                    escreval("         ",notepad[2], notepad[2], notepad[13])
+                                    escreval("         ",notepad[2], notepad[2], notepad[14])
+                                    escreval("         ",notepad[6], notepad[6], notepad[15])
+                                    escreval("         ",notepad[7], notepad[7], notepad[16])
+                                    escreval("         ",notepad[7], notepad[7], notepad[17])
                                     escreval()
                                     
                                     se (temp = verdadeiro) entao
@@ -416,16 +392,16 @@ Inicio
                                        timer 120
                                     fimse
                                     
-                                    escreval("         ",pt_fec_cima, pt_abrt_bode_1, pt_fec_cima)
-                                    escreval("         ",pt_fec_lado, pt_abrt_bode_2, pt_fec_lado)
-                                    escreval("         ",pt_fec_lado, pt_abrt_bode_3, pt_fec_lado)
-                                    escreval("         ",pt_fec_lado, pt_abrt_bode_4, pt_fec_lado)
-                                    escreval("         ",pt_fec_1, pt_abrt_bode_5, pt_fec_3)
-                                    escreval("         ",pt_fec_lado, pt_abrt_bode_6, pt_fec_lado)
-                                    escreval("         ",pt_fec_lado, pt_abrt_bode_7, pt_fec_lado)
-                                    escreval("         ",pt_fec_baixo, pt_abrt_bode_8, pt_fec_baixo)
-                                    escreval("         ",pt_fec_esp, pt_abrt_bode_9, pt_fec_esp)
-                                    escreval("         ",pt_fec_esp, pt_abrt_bode_10, pt_fec_esp)
+                                    escreval("         ",notepad[1], notepad[8], notepad[1])
+                                    escreval("         ",notepad[2], notepad[9], notepad[2])
+                                    escreval("         ",notepad[2], notepad[10], notepad[2])
+                                    escreval("         ",notepad[2], notepad[11], notepad[2])
+                                    escreval("         ",notepad[3], notepad[12], notepad[5])
+                                    escreval("         ",notepad[2], notepad[13], notepad[2])
+                                    escreval("         ",notepad[2], notepad[14], notepad[2])
+                                    escreval("         ",notepad[6], notepad[15], notepad[6])
+                                    escreval("         ",notepad[7], notepad[16], notepad[7])
+                                    escreval("         ",notepad[7], notepad[17], notepad[7])
                                     escreval()
                                     
                                     se (temp = verdadeiro) entao
@@ -451,16 +427,16 @@ Inicio
                                     timer 120
                                  fimse
                                  
-                                 escreval("      ",pt_abrt_carro_1, pt_abrt_bode_1, pt_abrt_bode_1)
-                                 escreval("      ",pt_abrt_carro_2, pt_abrt_bode_2, pt_abrt_bode_2)
-                                 escreval("      ",pt_abrt_carro_3, pt_abrt_bode_3, pt_abrt_bode_3)
-                                 escreval("      ",pt_abrt_carro_4, pt_abrt_bode_4, pt_abrt_bode_4)
-                                 escreval("      ",pt_abrt_carro_5, pt_abrt_bode_5, pt_abrt_bode_5)
-                                 escreval("      ",pt_abrt_carro_6, pt_abrt_bode_6, pt_abrt_bode_6)
-                                 escreval("      ",pt_abrt_carro_7, pt_abrt_bode_7, pt_abrt_bode_7)
-                                 escreval("      ",pt_abrt_carro_8, pt_abrt_bode_8, pt_abrt_bode_8)
-                                 escreval("      ",pt_abrt_carro_9, pt_abrt_bode_9, pt_abrt_bode_9)
-                                 escreval("      ",pt_abrt_carro_10, pt_abrt_bode_10, pt_abrt_bode_10)
+                                 escreval("      ",notepad[18], notepad[8], notepad[8])
+                                 escreval("      ",notepad[19], notepad[9], notepad[9])
+                                 escreval("      ",notepad[20], notepad[10], notepad[10])
+                                 escreval("      ",notepad[21], notepad[11], notepad[11])
+                                 escreval("      ",notepad[22], notepad[12], notepad[12])
+                                 escreval("      ",notepad[23], notepad[13], notepad[13])
+                                 escreval("      ",notepad[24], notepad[14], notepad[14])
+                                 escreval("      ",notepad[25], notepad[15], notepad[15])
+                                 escreval("      ",notepad[26], notepad[16], notepad[16])
+                                 escreval("      ",notepad[27], notepad[17], notepad[17])
                                  escreval()
 
                                  se (temp = verdadeiro) entao
@@ -514,16 +490,16 @@ Inicio
                                   timer 120
                                fimse
                                
-                               escreval("         ",pt_abrt_bode_1, pt_fec_cima, pt_fec_cima)
-                               escreval("         ",pt_abrt_bode_2, pt_fec_lado, pt_fec_lado)
-                               escreval("         ",pt_abrt_bode_3, pt_fec_lado, pt_fec_lado)
-                               escreval("         ",pt_abrt_bode_4, pt_fec_lado, pt_fec_lado)
-                               escreval("         ",pt_abrt_bode_5, pt_fec_2, pt_fec_3)
-                               escreval("         ",pt_abrt_bode_6, pt_fec_lado, pt_fec_lado)
-                               escreval("         ",pt_abrt_bode_7, pt_fec_lado, pt_fec_lado)
-                               escreval("         ",pt_abrt_bode_8, pt_fec_baixo, pt_fec_baixo)
-                               escreval("         ",pt_abrt_bode_9, pt_fec_esp, pt_fec_esp)
-                               escreval("         ",pt_abrt_bode_10, pt_fec_esp, pt_fec_esp)
+                               escreval("         ",notepad[8], notepad[1], notepad[1])
+                               escreval("         ",notepad[9], notepad[2], notepad[2])
+                               escreval("         ",notepad[10], notepad[2], notepad[2])
+                               escreval("         ",notepad[11], notepad[2], notepad[2])
+                               escreval("         ",notepad[12], notepad[4], notepad[5])
+                               escreval("         ",notepad[13], notepad[2], notepad[2])
+                               escreval("         ",notepad[14], notepad[2], notepad[2])
+                               escreval("         ",notepad[15], notepad[6], notepad[6])
+                               escreval("         ",notepad[16], notepad[7], notepad[7])
+                               escreval("         ",notepad[17], notepad[7], notepad[7])
                                escreval()
                                
                                se (temp = verdadeiro) entao
@@ -535,16 +511,16 @@ Inicio
                                        timer 120
                                     fimse
                                     
-                                    escreval("         ",pt_fec_cima, pt_fec_cima, pt_abrt_bode_1)
-                                    escreval("         ",pt_fec_lado, pt_fec_lado, pt_abrt_bode_2)
-                                    escreval("         ",pt_fec_lado, pt_fec_lado, pt_abrt_bode_3)
-                                    escreval("         ",pt_fec_lado, pt_fec_lado, pt_abrt_bode_4)
-                                    escreval("         ",pt_fec_1, pt_fec_2, pt_abrt_bode_5)
-                                    escreval("         ",pt_fec_lado, pt_fec_lado, pt_abrt_bode_6)
-                                    escreval("         ",pt_fec_lado, pt_fec_lado, pt_abrt_bode_7)
-                                    escreval("         ",pt_fec_baixo, pt_fec_baixo, pt_abrt_bode_8)
-                                    escreval("         ",pt_fec_esp, pt_fec_esp, pt_abrt_bode_9)
-                                    escreval("         ",pt_fec_esp, pt_fec_esp, pt_abrt_bode_10)
+                                    escreval("         ",notepad[1], notepad[1], notepad[8])
+                                    escreval("         ",notepad[2], notepad[2], notepad[9])
+                                    escreval("         ",notepad[2], notepad[2], notepad[10])
+                                    escreval("         ",notepad[2], notepad[2], notepad[11])
+                                    escreval("         ",notepad[3], notepad[4], notepad[12])
+                                    escreval("         ",notepad[2], notepad[2], notepad[13])
+                                    escreval("         ",notepad[2], notepad[2], notepad[14])
+                                    escreval("         ",notepad[6], notepad[6], notepad[15])
+                                    escreval("         ",notepad[7], notepad[7], notepad[16])
+                                    escreval("         ",notepad[7], notepad[7], notepad[17])
                                     escreval()
                                     
                                     se (temp = verdadeiro) entao
@@ -570,16 +546,16 @@ Inicio
                                timer 120
                             fimse
                             
-                            escreval("      ",pt_abrt_bode_1, pt_abrt_carro_1, pt_abrt_bode_1)
-                            escreval("      ",pt_abrt_bode_2, pt_abrt_carro_2, pt_abrt_bode_2)
-                            escreval("      ",pt_abrt_bode_3, pt_abrt_carro_3, pt_abrt_bode_3)
-                            escreval("      ",pt_abrt_bode_4, pt_abrt_carro_4, pt_abrt_bode_4)
-                            escreval("      ",pt_abrt_bode_5, pt_abrt_carro_5, pt_abrt_bode_5)
-                            escreval("      ",pt_abrt_bode_6, pt_abrt_carro_6, pt_abrt_bode_6)
-                            escreval("      ",pt_abrt_bode_7, pt_abrt_carro_7, pt_abrt_bode_7)
-                            escreval("      ",pt_abrt_bode_8, pt_abrt_carro_8, pt_abrt_bode_8)
-                            escreval("      ",pt_abrt_bode_9, pt_abrt_carro_9, pt_abrt_bode_9)
-                            escreval("      ",pt_abrt_bode_10, pt_abrt_carro_10, pt_abrt_bode_10)
+                            escreval("      ",notepad[8], notepad[18], notepad[8])
+                            escreval("      ",notepad[9], notepad[19], notepad[9])
+                            escreval("      ",notepad[10], notepad[20], notepad[10])
+                            escreval("      ",notepad[11], notepad[21], notepad[11])
+                            escreval("      ",notepad[12], notepad[22], notepad[12])
+                            escreval("      ",notepad[13], notepad[23], notepad[13])
+                            escreval("      ",notepad[14], notepad[24], notepad[14])
+                            escreval("      ",notepad[15], notepad[25], notepad[15])
+                            escreval("      ",notepad[16], notepad[26], notepad[16])
+                            escreval("      ",notepad[17], notepad[27], notepad[17])
                             escreval()
 
                             se (temp = verdadeiro) entao
@@ -624,16 +600,16 @@ Inicio
                                        timer 120
                                     fimse
                                     
-                                    escreval("         ",pt_fec_cima, pt_fec_cima, pt_abrt_bode_1)
-                                    escreval("         ",pt_fec_lado, pt_fec_lado, pt_abrt_bode_2)
-                                    escreval("         ",pt_fec_lado, pt_fec_lado, pt_abrt_bode_3)
-                                    escreval("         ",pt_fec_lado, pt_fec_lado, pt_abrt_bode_4)
-                                    escreval("         ",pt_fec_1, pt_fec_2, pt_abrt_bode_5)
-                                    escreval("         ",pt_fec_lado, pt_fec_lado, pt_abrt_bode_6)
-                                    escreval("         ",pt_fec_lado, pt_fec_lado, pt_abrt_bode_7)
-                                    escreval("         ",pt_fec_baixo, pt_fec_baixo, pt_abrt_bode_8)
-                                    escreval("         ",pt_fec_esp, pt_fec_esp, pt_abrt_bode_9)
-                                    escreval("         ",pt_fec_esp, pt_fec_esp, pt_abrt_bode_10)
+                                    escreval("         ",notepad[1], notepad[1], notepad[8])
+                                    escreval("         ",notepad[2], notepad[2], notepad[9])
+                                    escreval("         ",notepad[2], notepad[2], notepad[10])
+                                    escreval("         ",notepad[2], notepad[2], notepad[11])
+                                    escreval("         ",notepad[3], notepad[4], notepad[12])
+                                    escreval("         ",notepad[2], notepad[2], notepad[13])
+                                    escreval("         ",notepad[2], notepad[2], notepad[14])
+                                    escreval("         ",notepad[6], notepad[6], notepad[15])
+                                    escreval("         ",notepad[7], notepad[7], notepad[16])
+                                    escreval("         ",notepad[7], notepad[7], notepad[17])
                                     escreval()
                                     
                                     se (temp = verdadeiro) entao
@@ -645,16 +621,16 @@ Inicio
                                        timer 120
                                     fimse
                                     
-                                    escreval("         ",pt_abrt_bode_1, pt_fec_cima, pt_fec_cima)
-                                    escreval("         ",pt_abrt_bode_2, pt_fec_lado, pt_fec_lado)
-                                    escreval("         ",pt_abrt_bode_3, pt_fec_lado, pt_fec_lado)
-                                    escreval("         ",pt_abrt_bode_4, pt_fec_lado, pt_fec_lado)
-                                    escreval("         ",pt_abrt_bode_5, pt_fec_2, pt_fec_3)
-                                    escreval("         ",pt_abrt_bode_6, pt_fec_lado, pt_fec_lado)
-                                    escreval("         ",pt_abrt_bode_7, pt_fec_lado, pt_fec_lado)
-                                    escreval("         ",pt_abrt_bode_8, pt_fec_baixo, pt_fec_baixo)
-                                    escreval("         ",pt_abrt_bode_9, pt_fec_esp, pt_fec_esp)
-                                    escreval("         ",pt_abrt_bode_10, pt_fec_esp, pt_fec_esp)
+                                    escreval("         ",notepad[8], notepad[1], notepad[1])
+                                    escreval("         ",notepad[9], notepad[2], notepad[2])
+                                    escreval("         ",notepad[10], notepad[2], notepad[2])
+                                    escreval("         ",notepad[11], notepad[2], notepad[2])
+                                    escreval("         ",notepad[12], notepad[4], notepad[5])
+                                    escreval("         ",notepad[13], notepad[2], notepad[2])
+                                    escreval("         ",notepad[14], notepad[2], notepad[2])
+                                    escreval("         ",notepad[15], notepad[6], notepad[6])
+                                    escreval("         ",notepad[16], notepad[7], notepad[7])
+                                    escreval("         ",notepad[17], notepad[7], notepad[7])
                                     escreval()
                                     
                                     se (temp = verdadeiro) entao
@@ -680,16 +656,16 @@ Inicio
                                     timer 120
                                  fimse
                                  
-                                 escreval("      ",pt_abrt_bode_1, pt_abrt_carro_1, pt_abrt_bode_1)
-                                 escreval("      ",pt_abrt_bode_2, pt_abrt_carro_2, pt_abrt_bode_2)
-                                 escreval("      ",pt_abrt_bode_3, pt_abrt_carro_3, pt_abrt_bode_3)
-                                 escreval("      ",pt_abrt_bode_4, pt_abrt_carro_4, pt_abrt_bode_4)
-                                 escreval("      ",pt_abrt_bode_5, pt_abrt_carro_5, pt_abrt_bode_5)
-                                 escreval("      ",pt_abrt_bode_6, pt_abrt_carro_6, pt_abrt_bode_6)
-                                 escreval("      ",pt_abrt_bode_7, pt_abrt_carro_7, pt_abrt_bode_7)
-                                 escreval("      ",pt_abrt_bode_8, pt_abrt_carro_8, pt_abrt_bode_8)
-                                 escreval("      ",pt_abrt_bode_9, pt_abrt_carro_9, pt_abrt_bode_9)
-                                 escreval("      ",pt_abrt_bode_10, pt_abrt_carro_10, pt_abrt_bode_10)
+                                 escreval("      ",notepad[8], notepad[18], notepad[8])
+                                 escreval("      ",notepad[9], notepad[19], notepad[9])
+                                 escreval("      ",notepad[10], notepad[20], notepad[10])
+                                 escreval("      ",notepad[11], notepad[21], notepad[11])
+                                 escreval("      ",notepad[12], notepad[22], notepad[12])
+                                 escreval("      ",notepad[13], notepad[23], notepad[13])
+                                 escreval("      ",notepad[14], notepad[24], notepad[14])
+                                 escreval("      ",notepad[15], notepad[25], notepad[15])
+                                 escreval("      ",notepad[16], notepad[26], notepad[16])
+                                 escreval("      ",notepad[17], notepad[27], notepad[17])
                                  escreval()
 
                                  se (temp = verdadeiro) entao
@@ -743,16 +719,16 @@ Inicio
                                   timer 120
                                fimse
                                
-                               escreval("         ",pt_abrt_bode_1, pt_fec_cima, pt_fec_cima)
-                               escreval("         ",pt_abrt_bode_2, pt_fec_lado, pt_fec_lado)
-                               escreval("         ",pt_abrt_bode_3, pt_fec_lado, pt_fec_lado)
-                               escreval("         ",pt_abrt_bode_4, pt_fec_lado, pt_fec_lado)
-                               escreval("         ",pt_abrt_bode_5, pt_fec_2, pt_fec_3)
-                               escreval("         ",pt_abrt_bode_6, pt_fec_lado, pt_fec_lado)
-                               escreval("         ",pt_abrt_bode_7, pt_fec_lado, pt_fec_lado)
-                               escreval("         ",pt_abrt_bode_8, pt_fec_baixo, pt_fec_baixo)
-                               escreval("         ",pt_abrt_bode_9, pt_fec_esp, pt_fec_esp)
-                               escreval("         ",pt_abrt_bode_10, pt_fec_esp, pt_fec_esp)
+                               escreval("         ",notepad[8], notepad[1], notepad[1])
+                               escreval("         ",notepad[9], notepad[2], notepad[2])
+                               escreval("         ",notepad[10], notepad[2], notepad[2])
+                               escreval("         ",notepad[11], notepad[2], notepad[2])
+                               escreval("         ",notepad[12], notepad[4], notepad[5])
+                               escreval("         ",notepad[13], notepad[2], notepad[2])
+                               escreval("         ",notepad[14], notepad[2], notepad[2])
+                               escreval("         ",notepad[15], notepad[6], notepad[6])
+                               escreval("         ",notepad[16], notepad[7], notepad[7])
+                               escreval("         ",notepad[17], notepad[7], notepad[7])
                                escreval()
                                
                                se (temp = verdadeiro) entao
@@ -764,16 +740,16 @@ Inicio
                                        timer 120
                                     fimse
                                     
-                                    escreval("         ",pt_fec_cima, pt_abrt_bode_1, pt_fec_cima)
-                                    escreval("         ",pt_fec_lado, pt_abrt_bode_2, pt_fec_lado)
-                                    escreval("         ",pt_fec_lado, pt_abrt_bode_3, pt_fec_lado)
-                                    escreval("         ",pt_fec_lado, pt_abrt_bode_4, pt_fec_lado)
-                                    escreval("         ",pt_fec_1, pt_abrt_bode_5, pt_fec_3)
-                                    escreval("         ",pt_fec_lado, pt_abrt_bode_6, pt_fec_lado)
-                                    escreval("         ",pt_fec_lado, pt_abrt_bode_7, pt_fec_lado)
-                                    escreval("         ",pt_fec_baixo, pt_abrt_bode_8, pt_fec_baixo)
-                                    escreval("         ",pt_fec_esp, pt_abrt_bode_9, pt_fec_esp)
-                                    escreval("         ",pt_fec_esp, pt_abrt_bode_10, pt_fec_esp)
+                                    escreval("         ",notepad[1], notepad[8], notepad[1])
+                                    escreval("         ",notepad[2], notepad[9], notepad[2])
+                                    escreval("         ",notepad[2], notepad[10], notepad[2])
+                                    escreval("         ",notepad[2], notepad[11], notepad[2])
+                                    escreval("         ",notepad[3], notepad[12], notepad[5])
+                                    escreval("         ",notepad[2], notepad[13], notepad[2])
+                                    escreval("         ",notepad[2], notepad[14], notepad[2])
+                                    escreval("         ",notepad[6], notepad[15], notepad[6])
+                                    escreval("         ",notepad[7], notepad[16], notepad[7])
+                                    escreval("         ",notepad[7], notepad[17], notepad[7])
                                     escreval()
                                     
                                     se (temp = verdadeiro) entao
@@ -799,16 +775,16 @@ Inicio
                                timer 120
                             fimse
                             
-                            escreval("      ",pt_abrt_bode_1, pt_abrt_bode_1, pt_abrt_carro_1)
-                            escreval("      ",pt_abrt_bode_2, pt_abrt_bode_2, pt_abrt_carro_2)
-                            escreval("      ",pt_abrt_bode_3, pt_abrt_bode_3, pt_abrt_carro_3)
-                            escreval("      ",pt_abrt_bode_4, pt_abrt_bode_4, pt_abrt_carro_4)
-                            escreval("      ",pt_abrt_bode_5, pt_abrt_bode_5, pt_abrt_carro_5)
-                            escreval("      ",pt_abrt_bode_6, pt_abrt_bode_6, pt_abrt_carro_6)
-                            escreval("      ",pt_abrt_bode_7, pt_abrt_bode_7, pt_abrt_carro_7)
-                            escreval("      ",pt_abrt_bode_8, pt_abrt_bode_8, pt_abrt_carro_8)
-                            escreval("      ",pt_abrt_bode_9, pt_abrt_bode_9, pt_abrt_carro_9)
-                            escreval("      ",pt_abrt_bode_10, pt_abrt_bode_10, pt_abrt_carro_10)
+                            escreval("      ",notepad[8], notepad[8], notepad[18])
+                            escreval("      ",notepad[9], notepad[9], notepad[19])
+                            escreval("      ",notepad[10], notepad[10], notepad[20])
+                            escreval("      ",notepad[11], notepad[11], notepad[21])
+                            escreval("      ",notepad[12], notepad[12], notepad[22])
+                            escreval("      ",notepad[13], notepad[13], notepad[23])
+                            escreval("      ",notepad[14], notepad[14], notepad[24])
+                            escreval("      ",notepad[15], notepad[15], notepad[25])
+                            escreval("      ",notepad[16], notepad[16], notepad[26])
+                            escreval("      ",notepad[17], notepad[17], notepad[27])
                             escreval()
 
                             se (temp = verdadeiro) entao
@@ -853,16 +829,16 @@ Inicio
                                        timer 120
                                     fimse
                                     
-                                    escreval("         ",pt_abrt_bode_1, pt_fec_cima, pt_fec_cima)
-                                    escreval("         ",pt_abrt_bode_2, pt_fec_lado, pt_fec_lado)
-                                    escreval("         ",pt_abrt_bode_3, pt_fec_lado, pt_fec_lado)
-                                    escreval("         ",pt_abrt_bode_4, pt_fec_lado, pt_fec_lado)
-                                    escreval("         ",pt_abrt_bode_5, pt_fec_2, pt_fec_3)
-                                    escreval("         ",pt_abrt_bode_6, pt_fec_lado, pt_fec_lado)
-                                    escreval("         ",pt_abrt_bode_7, pt_fec_lado, pt_fec_lado)
-                                    escreval("         ",pt_abrt_bode_8, pt_fec_baixo, pt_fec_baixo)
-                                    escreval("         ",pt_abrt_bode_9, pt_fec_esp, pt_fec_esp)
-                                    escreval("         ",pt_abrt_bode_10, pt_fec_esp, pt_fec_esp)
+                                    escreval("         ",notepad[8], notepad[1], notepad[1])
+                                    escreval("         ",notepad[9], notepad[2], notepad[2])
+                                    escreval("         ",notepad[10], notepad[2], notepad[2])
+                                    escreval("         ",notepad[11], notepad[2], notepad[2])
+                                    escreval("         ",notepad[12], notepad[4], notepad[5])
+                                    escreval("         ",notepad[13], notepad[2], notepad[2])
+                                    escreval("         ",notepad[14], notepad[2], notepad[2])
+                                    escreval("         ",notepad[15], notepad[6], notepad[6])
+                                    escreval("         ",notepad[16], notepad[7], notepad[7])
+                                    escreval("         ",notepad[17], notepad[7], notepad[7])
                                     escreval()
                                     
                                     se (temp = verdadeiro) entao
@@ -874,16 +850,16 @@ Inicio
                                        timer 120
                                     fimse
                                     
-                                    escreval("         ",pt_fec_cima, pt_abrt_bode_1, pt_fec_cima)
-                                    escreval("         ",pt_fec_lado, pt_abrt_bode_2, pt_fec_lado)
-                                    escreval("         ",pt_fec_lado, pt_abrt_bode_3, pt_fec_lado)
-                                    escreval("         ",pt_fec_lado, pt_abrt_bode_4, pt_fec_lado)
-                                    escreval("         ",pt_fec_1, pt_abrt_bode_5, pt_fec_3)
-                                    escreval("         ",pt_fec_lado, pt_abrt_bode_6, pt_fec_lado)
-                                    escreval("         ",pt_fec_lado, pt_abrt_bode_7, pt_fec_lado)
-                                    escreval("         ",pt_fec_baixo, pt_abrt_bode_8, pt_fec_baixo)
-                                    escreval("         ",pt_fec_esp, pt_abrt_bode_9, pt_fec_esp)
-                                    escreval("         ",pt_fec_esp, pt_abrt_bode_10, pt_fec_esp)
+                                    escreval("         ",notepad[1], notepad[8], notepad[1])
+                                    escreval("         ",notepad[2], notepad[9], notepad[2])
+                                    escreval("         ",notepad[2], notepad[10], notepad[2])
+                                    escreval("         ",notepad[2], notepad[11], notepad[2])
+                                    escreval("         ",notepad[3], notepad[12], notepad[5])
+                                    escreval("         ",notepad[2], notepad[13], notepad[2])
+                                    escreval("         ",notepad[2], notepad[14], notepad[2])
+                                    escreval("         ",notepad[6], notepad[15], notepad[6])
+                                    escreval("         ",notepad[7], notepad[16], notepad[7])
+                                    escreval("         ",notepad[7], notepad[17], notepad[7])
                                     escreval()
                                     
                                     se (temp = verdadeiro) entao
@@ -909,16 +885,16 @@ Inicio
                                     timer 120
                                  fimse
                                  
-                                 escreval("      ",pt_abrt_bode_1, pt_abrt_bode_1, pt_abrt_carro_1)
-                                 escreval("      ",pt_abrt_bode_2, pt_abrt_bode_2, pt_abrt_carro_2)
-                                 escreval("      ",pt_abrt_bode_3, pt_abrt_bode_3, pt_abrt_carro_3)
-                                 escreval("      ",pt_abrt_bode_4, pt_abrt_bode_4, pt_abrt_carro_4)
-                                 escreval("      ",pt_abrt_bode_5, pt_abrt_bode_5, pt_abrt_carro_5)
-                                 escreval("      ",pt_abrt_bode_6, pt_abrt_bode_6, pt_abrt_carro_6)
-                                 escreval("      ",pt_abrt_bode_7, pt_abrt_bode_7, pt_abrt_carro_7)
-                                 escreval("      ",pt_abrt_bode_8, pt_abrt_bode_8, pt_abrt_carro_8)
-                                 escreval("      ",pt_abrt_bode_9, pt_abrt_bode_9, pt_abrt_carro_9)
-                                 escreval("      ",pt_abrt_bode_10, pt_abrt_bode_10, pt_abrt_carro_10)
+                                 escreval("      ",notepad[8], notepad[8], notepad[18])
+                                 escreval("      ",notepad[9], notepad[9], notepad[19])
+                                 escreval("      ",notepad[10], notepad[10], notepad[20])
+                                 escreval("      ",notepad[11], notepad[11], notepad[21])
+                                 escreval("      ",notepad[12], notepad[12], notepad[22])
+                                 escreval("      ",notepad[13], notepad[13], notepad[23])
+                                 escreval("      ",notepad[14], notepad[14], notepad[24])
+                                 escreval("      ",notepad[15], notepad[15], notepad[25])
+                                 escreval("      ",notepad[16], notepad[16], notepad[26])
+                                 escreval("      ",notepad[17], notepad[17], notepad[27])
                                  escreval()
 
                                  se (temp = verdadeiro) entao
