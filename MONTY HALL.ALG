@@ -3,17 +3,20 @@ Algoritmo "MONTY HALL"
           // Aluno: Guilherme de Oliveira Dias - 019730
           // Professora: Ana Paula Renno Costa; Lidiane Gomes da Silva
           // Matéria: Algoritmo e Lógica para Computação; Probabilidade e Estatistíca
-          // Produzido: 07/05/2021
+          // Começo de produção: 07/05/2021
+          // Finalização: /05/2021
 
 arquivo "logo_monty_hall.txt"
 
 Var
-        num_one_car, num_two, num_three, aux: inteiro  // variaveis com valor atribuido aleatoriamente
+        num_one_car, num_two, num_three, num_four, aux: inteiro  // variaveis com valor atribuido aleatoriamente
 
         port: inteiro // porta atribuida ao carro
         port_alt_one: inteiro // primeira escolha da pessoa
         port_alt_lock: inteiro // porta trancada
         port_alt_two, help: caractere // segunda escolha da pessoa
+        
+        temp: logico
 
         log_1, log_2, log_3, log_4, log_5, log_6: caractere // partição da primeira parte da logo_monty_hall
         log_7, log_8, log_9, log_10, log_11, log_12: caractere // partição da segunda parte da logo_monty_hall
@@ -30,8 +33,13 @@ Inicio
         aleatorio 1,3  // aleatoriza a porta onde o carro estará
         leia(num_one_car)
         aleatorio off
-
+        
         limpatela
+        
+        //codificação do tempo
+        //tempo está ligado?
+        temp <= verdadeiro
+        //end
         
         leia(pt_fec_cima)
         leia(pt_fec_lado)
@@ -40,6 +48,8 @@ Inicio
         leia(pt_fec_3)
         leia(pt_fec_baixo)
         leia(pt_fec_esp)
+        
+        limpatela
         
         leia(pt_abrt_bode_1)
         leia(pt_abrt_bode_2)
@@ -51,7 +61,9 @@ Inicio
         leia(pt_abrt_bode_8)
         leia(pt_abrt_bode_9)
         leia(pt_abrt_bode_10)
-        
+
+        limpatela
+
         leia(pt_abrt_carro_1)
         leia(pt_abrt_carro_2)
         leia(pt_abrt_carro_3)
@@ -62,7 +74,9 @@ Inicio
         leia(pt_abrt_carro_8)
         leia(pt_abrt_carro_9)
         leia(pt_abrt_carro_10)
-        
+
+        limpatela
+
         leia(log_er_1)
         leia(log_er_2)
         leia(log_er_3)
@@ -74,7 +88,9 @@ Inicio
         
         limpatela
         
-        timer 200
+        se (temp = verdadeiro) entao
+           timer 200
+        fimse
 
         escreval()
         escreval()
@@ -92,9 +108,11 @@ Inicio
         leia(log_11)
         leia(log_12)
 
-        timer 2000
+        se (temp = verdadeiro) entao
+           timer 2000
 
-        timer 0
+           timer 0
+        fimse
 
         limpatela
         
@@ -118,7 +136,9 @@ Inicio
         
         //mensagens de instrução ao participante
         se (help = "sim") ou (help = "SIM") ou (help = "Sim") entao
-           timer 30
+           se (temp = verdadeiro) entao
+              timer 30
+           fimse
            
            escreval(log_reg_1)
            escreval(log_reg_2)
@@ -195,14 +215,18 @@ Inicio
 
            limpatela
            
-           timer 200
+           se (temp = verdadeiro) entao
+              timer 200
+           fimse
            
            escreval(log_reg_1)
            escreval(log_reg_2)
            escreval(log_reg_3)
            escreval(log_reg_4)
            
-           timer 500
+           se (temp = verdadeiro) entao
+              timer 500
+           fimse
            
            escreval("----------------------------------------------------------------")
            escreval("1- De primeiro momento aparecem 3 portas ao jogador;")
@@ -212,8 +236,10 @@ Inicio
            escreval("5- É perguntado se você gostaria de trocar de porta;")
            escreval("6- A troca, ou não, gerá o resultado se você for o ganhador ou não.")
            escreval("----------------------------------------------------------------")
-           
-           timer 200
+
+           se (temp = verdadeiro) entao
+              timer 200
+           fimse
            
            escreval(log_reg_5)
            escreval(log_reg_6)
@@ -221,15 +247,19 @@ Inicio
            escreval(log_reg_8)
            escreval()
            escreval("                  *Para sair pressione F9*                      ")
-           
-           timer 0
+
+           se (temp = verdadeiro) entao
+              timer 0
+           fimse
            
            pausa
         fimse
         
         limpatela
         
-        //timer 100
+        se (temp = verdadeiro) entao
+           timer 100
+        fimse
         
         escreval("          ",pt_fec_cima, pt_fec_cima, pt_fec_cima)
         escreval("          ",pt_fec_lado, pt_fec_lado, pt_fec_lado)
@@ -243,8 +273,8 @@ Inicio
         
         timer 0
         
-        // fim da apresentação e hora de escolha da porta
-        escolha(num_one_car) // permite que dependendo de qual porta o carro esteja seja realizado ações distintas
+        // fim da apresentaï¿½ï¿½o e hora de escolha da porta
+        escolha(num_one_car) // permite que dependendo de qual porta o carro esteja seja realizado aï¿½ï¿½es distintas
                     caso 1
                          port <- 1
 
@@ -252,14 +282,14 @@ Inicio
                          escreva("-> ")
                          leia(port_alt_one)
                          
-                         se (port_alt_one <> port) entao //se o número da porta escolhida for diferente da porta do carro
+                         se (port_alt_one <> port) entao //se o nï¿½mero da porta escolhida for diferente da porta do carro
                             repita
                                   aleatorio 1,3
                                   leia(num_two)
                                   aleatorio off
                                
                                   limpatela
-                            ate (port_alt_one <> port) e (port_alt_one <> num_two) e (port <> num_two) // permitir escolher um número diferente da onde a porta com o carro está e uma porta diferente da escolhida
+                            ate (port_alt_one <> port) e (port_alt_one <> num_two) e (port <> num_two) // permitir escolher um nï¿½mero diferente da onde a porta com o carro estï¿½ e uma porta diferente da escolhida
 
                             repita
                                   aleatorio 1,3
@@ -270,8 +300,10 @@ Inicio
                             ate (port_alt_one <> port_alt_lock) e (num_two <> port_alt_lock)
 
                             se (num_two = 3) entao
-                               timer 120
-                               
+                               se (temp = verdadeiro) entao
+                                  timer 120
+                               fimse
+
                                escreval("         ",pt_fec_cima, pt_fec_cima, pt_abrt_bode_1)
                                escreval("         ",pt_fec_lado, pt_fec_lado, pt_abrt_bode_2)
                                escreval("         ",pt_fec_lado, pt_fec_lado, pt_abrt_bode_3)
@@ -284,11 +316,15 @@ Inicio
                                escreval("         ",pt_fec_esp, pt_fec_esp, pt_abrt_bode_10)
                                escreval()
                                
-                               timer 0
+                               se (temp = verdadeiro) entao
+                                  timer 0
+                               fimse
                             senao
                                  se (num_two = 2) entao
-                                    timer 120
-
+                                    se (temp = verdadeiro) entao
+                                       timer 120
+                                    fimse
+                                    
                                     escreval("         ",pt_fec_cima, pt_abrt_bode_1, pt_fec_cima)
                                     escreval("         ",pt_fec_lado, pt_abrt_bode_2, pt_fec_lado)
                                     escreval("         ",pt_fec_lado, pt_abrt_bode_3, pt_fec_lado)
@@ -300,8 +336,9 @@ Inicio
                                     escreval("         ",pt_fec_esp, pt_abrt_bode_9, pt_fec_esp)
                                     escreval("         ",pt_fec_esp, pt_abrt_bode_10, pt_fec_esp)
                                     escreval()
-                                    
-                                    timer 0
+                                    se (temp = verdadeiro) entao
+                                       timer 0
+                                    fimse
                             fimse
                             fimse
                             
@@ -318,8 +355,10 @@ Inicio
 
                             limpatela
 
-                            timer 120
-
+                            se (temp = verdadeiro) entao
+                               timer 120
+                            fimse
+                            
                             escreval("      ",pt_abrt_carro_1, pt_abrt_bode_1, pt_abrt_bode_1)
                             escreval("      ",pt_abrt_carro_2, pt_abrt_bode_2, pt_abrt_bode_2)
                             escreval("      ",pt_abrt_carro_3, pt_abrt_bode_3, pt_abrt_bode_3)
@@ -331,9 +370,11 @@ Inicio
                             escreval("      ",pt_abrt_carro_9, pt_abrt_bode_9, pt_abrt_bode_9)
                             escreval("      ",pt_abrt_carro_10, pt_abrt_bode_10, pt_abrt_bode_10)
                             escreval()
-                            
-                            timer 0
 
+                            se (temp = verdadeiro) entao
+                               timer 0
+                            fimse
+                            
                             se (port_alt_two = "sim") ou (port_alt_two = "SIM") ou (port_alt_two = "Sim") entao
                                escreval("*PORTA FINAL ESCOLHIDA: Nº 1*")
                                escreval()
@@ -351,7 +392,7 @@ Inicio
                          
                          senao
                               se (port_alt_one = port) entao //se o número da porta escolhida for igual da porta do carro
-                                 aleatorio 1,10
+                                 aleatorio 1,10  // o acaso da mesma porta do carro ser escolhido se faz necessario uma escolha aleatoria sobre as duas portas consequentes
                                  leia(num_three)
                                  aleatorio off
                                  
@@ -368,7 +409,9 @@ Inicio
                                  fimse
                                  
                                  se (num_two = 3) entao
-                                    timer 120
+                                    se (temp = verdadeiro) entao
+                                       timer 120
+                                    fimse
                                     
                                     escreval("         ",pt_fec_cima, pt_fec_cima, pt_abrt_bode_1)
                                     escreval("         ",pt_fec_lado, pt_fec_lado, pt_abrt_bode_2)
@@ -382,10 +425,14 @@ Inicio
                                     escreval("         ",pt_fec_esp, pt_fec_esp, pt_abrt_bode_10)
                                     escreval()
                                     
-                                    timer 0
+                                    se (temp = verdadeiro) entao
+                                       timer 0
+                                    fimse
                                  senao
                                  se (num_two = 2) entao
-                                    timer 120
+                                    se (temp = verdadeiro) entao
+                                       timer 120
+                                    fimse
                                     
                                     escreval("         ",pt_fec_cima, pt_abrt_bode_1, pt_fec_cima)
                                     escreval("         ",pt_fec_lado, pt_abrt_bode_2, pt_fec_lado)
@@ -399,7 +446,9 @@ Inicio
                                     escreval("         ",pt_fec_esp, pt_abrt_bode_10, pt_fec_esp)
                                     escreval()
                                     
-                                    timer 0
+                                    se (temp = verdadeiro) entao
+                                       timer 0
+                                    fimse
                                  fimse
                                  fimse
 
@@ -416,7 +465,9 @@ Inicio
 
                                  limpatela
                                  
-                                 timer 120
+                                 se (temp = verdadeiro) entao
+                                    timer 120
+                                 fimse
                                  
                                  escreval("      ",pt_abrt_carro_1, pt_abrt_bode_1, pt_abrt_bode_1)
                                  escreval("      ",pt_abrt_carro_2, pt_abrt_bode_2, pt_abrt_bode_2)
@@ -430,7 +481,9 @@ Inicio
                                  escreval("      ",pt_abrt_carro_10, pt_abrt_bode_10, pt_abrt_bode_10)
                                  escreval()
 
-                                 timer 0
+                                 se (temp = verdadeiro) entao
+                                    timer 0
+                                 fimse
                                  
                                  se (port_alt_two = "sim") ou (port_alt_two = "SIM") ou (port_alt_two = "Sim") entao
                                     escreval("*PORTA ESCOLHIDA: Nº", aux,"*")
@@ -457,14 +510,14 @@ Inicio
                          escreval("Escolha uma das portas: ")
                          leia(port_alt_one)
 
-                         se (port_alt_one <> port) entao //se o número da porta escolhida for diferente da porta do carro
+                         se (port_alt_one <> port) entao //se o nï¿½mero da porta escolhida for diferente da porta do carro
                             repita
                                   aleatorio 1,3
                                   leia(num_two)
                                   aleatorio off
 
                                   limpatela
-                            ate (port_alt_one <> port) e (port_alt_one <> num_two) e (port <> num_two) // permitir escolher um número diferente da onde a porta com o carro está e uma porta diferente da escolhida
+                            ate (port_alt_one <> port) e (port_alt_one <> num_two) e (port <> num_two) // permitir escolher um nï¿½mero diferente da onde a porta com o carro estï¿½ e uma porta diferente da escolhida
 
                             repita
                                   aleatorio 1,3
@@ -475,7 +528,9 @@ Inicio
                             ate (port_alt_one <> port_alt_lock) e (num_two <> port_alt_lock)
 
                             se (num_two = 1) entao
-                               timer 120
+                               se (temp = verdadeiro) entao
+                                  timer 120
+                               fimse
                                
                                escreval("         ",pt_abrt_bode_1, pt_fec_cima, pt_fec_cima)
                                escreval("         ",pt_abrt_bode_2, pt_fec_lado, pt_fec_lado)
@@ -489,10 +544,14 @@ Inicio
                                escreval("         ",pt_abrt_bode_10, pt_fec_esp, pt_fec_esp)
                                escreval()
                                
-                               timer 0
+                               se (temp = verdadeiro) entao
+                                  timer 0
+                               fimse
                             senao
                                  se (num_two = 3) entao
-                                    timer 120
+                                    se (temp = verdadeiro) entao
+                                       timer 120
+                                    fimse
                                     
                                     escreval("         ",pt_fec_cima, pt_fec_cima, pt_abrt_bode_1)
                                     escreval("         ",pt_fec_lado, pt_fec_lado, pt_abrt_bode_2)
@@ -506,7 +565,9 @@ Inicio
                                     escreval("         ",pt_fec_esp, pt_fec_esp, pt_abrt_bode_10)
                                     escreval()
                                     
-                                    timer 0
+                                    se (temp = verdadeiro) entao
+                                       timer 0
+                                    fimse
                             fimse
                             fimse
 
@@ -523,7 +584,9 @@ Inicio
 
                             limpatela
 
-                            timer 120
+                            se (temp = verdadeiro) entao
+                               timer 120
+                            fimse
                             
                             escreval("      ",pt_abrt_bode_1, pt_abrt_carro_1, pt_abrt_bode_1)
                             escreval("      ",pt_abrt_bode_2, pt_abrt_carro_2, pt_abrt_bode_2)
@@ -537,7 +600,9 @@ Inicio
                             escreval("      ",pt_abrt_bode_10, pt_abrt_carro_10, pt_abrt_bode_10)
                             escreval()
 
-                            timer 0
+                            se (temp = verdadeiro) entao
+                               timer 0
+                            fimse
                             
                             se (port_alt_two = "sim") ou (port_alt_two = "SIM") ou (port_alt_two = "Sim") entao
                                escreval("*PORTA FINAL ESCOLHIDA: Nº 2*")
@@ -556,7 +621,7 @@ Inicio
 
                          senao
                               se (port_alt_one = port) entao //se o número da porta escolhida for igual da porta do carro
-                                 aleatorio 1,10
+                                 aleatorio 1,10  // o acaso da mesma porta do carro ser escolhido se faz necessario uma escolha aleatoria sobre as duas portas consequentes
                                  leia(num_three)
                                  aleatorio off
 
@@ -573,7 +638,9 @@ Inicio
                                  fimse
 
                                  se (num_two = 3) entao
-                                    timer 120
+                                    se (temp = verdadeiro) entao
+                                       timer 120
+                                    fimse
                                     
                                     escreval("         ",pt_fec_cima, pt_fec_cima, pt_abrt_bode_1)
                                     escreval("         ",pt_fec_lado, pt_fec_lado, pt_abrt_bode_2)
@@ -587,10 +654,14 @@ Inicio
                                     escreval("         ",pt_fec_esp, pt_fec_esp, pt_abrt_bode_10)
                                     escreval()
                                     
-                                    timer 0
+                                    se (temp = verdadeiro) entao
+                                       timer 0
+                                    fimse
                                  senao
                                  se (num_two = 1) entao
-                                    timer 120
+                                    se (temp = verdadeiro) entao
+                                       timer 120
+                                    fimse
                                     
                                     escreval("         ",pt_abrt_bode_1, pt_fec_cima, pt_fec_cima)
                                     escreval("         ",pt_abrt_bode_2, pt_fec_lado, pt_fec_lado)
@@ -604,7 +675,9 @@ Inicio
                                     escreval("         ",pt_abrt_bode_10, pt_fec_esp, pt_fec_esp)
                                     escreval()
                                     
-                                    timer 0
+                                    se (temp = verdadeiro) entao
+                                       timer 0
+                                    fimse
                                  fimse
                                  fimse
 
@@ -621,7 +694,9 @@ Inicio
 
                                  limpatela
 
-                                 timer 120
+                                 se (temp = verdadeiro) entao
+                                    timer 120
+                                 fimse
                                  
                                  escreval("      ",pt_abrt_bode_1, pt_abrt_carro_1, pt_abrt_bode_1)
                                  escreval("      ",pt_abrt_bode_2, pt_abrt_carro_2, pt_abrt_bode_2)
@@ -635,7 +710,9 @@ Inicio
                                  escreval("      ",pt_abrt_bode_10, pt_abrt_carro_10, pt_abrt_bode_10)
                                  escreval()
 
-                                 timer 0
+                                 se (temp = verdadeiro) entao
+                                    timer 0
+                                 fimse
                                  
                                  se (port_alt_two = "sim") ou (port_alt_two = "SIM") ou (port_alt_two = "Sim") entao
                                     escreval("*PORTA ESCOLHIDA: Nº", aux,"*")
@@ -662,14 +739,14 @@ Inicio
                          escreval("Escolha uma das portas: ")
                          leia(port_alt_one)
 
-                         se (port_alt_one <> port) entao //se o número da porta escolhida for diferente da porta do carro
+                         se (port_alt_one <> port) entao //se o nï¿½mero da porta escolhida for diferente da porta do carro
                             repita
                                   aleatorio 1,3
                                   leia(num_two)
                                   aleatorio off
 
                                   limpatela
-                            ate (port_alt_one <> port) e (port_alt_one <> num_two) e (port <> num_two) // permitir escolher um número diferente da onde a porta com o carro está e uma porta diferente da escolhida
+                            ate (port_alt_one <> port) e (port_alt_one <> num_two) e (port <> num_two) // permitir escolher um nï¿½mero diferente da onde a porta com o carro estï¿½ e uma porta diferente da escolhida
 
                             repita
                                   aleatorio 1,3
@@ -680,7 +757,9 @@ Inicio
                             ate (port_alt_one <> port_alt_lock) e (num_two <> port_alt_lock)
 
                             se (num_two = 1) entao
-                               timer 120
+                               se (temp = verdadeiro) entao
+                                  timer 120
+                               fimse
                                
                                escreval("         ",pt_abrt_bode_1, pt_fec_cima, pt_fec_cima)
                                escreval("         ",pt_abrt_bode_2, pt_fec_lado, pt_fec_lado)
@@ -694,10 +773,14 @@ Inicio
                                escreval("         ",pt_abrt_bode_10, pt_fec_esp, pt_fec_esp)
                                escreval()
                                
-                               timer 0
+                               se (temp = verdadeiro) entao
+                                  timer 0
+                               fimse
                             senao
                                  se (num_two = 2) entao
-                                    timer 120
+                                    se (temp = verdadeiro) entao
+                                       timer 120
+                                    fimse
                                     
                                     escreval("         ",pt_fec_cima, pt_abrt_bode_1, pt_fec_cima)
                                     escreval("         ",pt_fec_lado, pt_abrt_bode_2, pt_fec_lado)
@@ -711,7 +794,9 @@ Inicio
                                     escreval("         ",pt_fec_esp, pt_abrt_bode_10, pt_fec_esp)
                                     escreval()
                                     
-                                    timer 0
+                                    se (temp = verdadeiro) entao
+                                       timer 0
+                                    fimse
                             fimse
                             fimse
 
@@ -728,7 +813,9 @@ Inicio
 
                             limpatela
 
-                            timer 120
+                            se (temp = verdadeiro) entao
+                               timer 120
+                            fimse
                             
                             escreval("      ",pt_abrt_bode_1, pt_abrt_bode_1, pt_abrt_carro_1)
                             escreval("      ",pt_abrt_bode_2, pt_abrt_bode_2, pt_abrt_carro_2)
@@ -742,7 +829,9 @@ Inicio
                             escreval("      ",pt_abrt_bode_10, pt_abrt_bode_10, pt_abrt_carro_10)
                             escreval()
 
-                            timer 0
+                            se (temp = verdadeiro) entao
+                               timer 0
+                            fimse
                             
                             se (port_alt_two = "sim") ou (port_alt_two = "SIM") ou (port_alt_two = "Sim") entao
                                escreval("*PORTA FINAL ESCOLHIDA: Nº 3*")
@@ -761,7 +850,7 @@ Inicio
 
                          senao
                               se (port_alt_one = port) entao //se o número da porta escolhida for igual da porta do carro
-                                 aleatorio 1,10
+                                 aleatorio 1,10  // o acaso da mesma porta do carro ser escolhido se faz necessario uma escolha aleatoria sobre as duas portas consequentes
                                  leia(num_three)
                                  aleatorio off
 
@@ -778,7 +867,9 @@ Inicio
                                  fimse
 
                                  se (num_two = 1) entao
-                                    timer 120
+                                    se (temp = verdadeiro) entao
+                                       timer 120
+                                    fimse
                                     
                                     escreval("         ",pt_abrt_bode_1, pt_fec_cima, pt_fec_cima)
                                     escreval("         ",pt_abrt_bode_2, pt_fec_lado, pt_fec_lado)
@@ -792,10 +883,14 @@ Inicio
                                     escreval("         ",pt_abrt_bode_10, pt_fec_esp, pt_fec_esp)
                                     escreval()
                                     
-                                    timer 0
+                                    se (temp = verdadeiro) entao
+                                       timer 0
+                                    fimse
                                  senao
                                  se (num_two = 2) entao
-                                    timer 120
+                                    se (temp = verdadeiro) entao
+                                       timer 120
+                                    fimse
                                     
                                     escreval("         ",pt_fec_cima, pt_abrt_bode_1, pt_fec_cima)
                                     escreval("         ",pt_fec_lado, pt_abrt_bode_2, pt_fec_lado)
@@ -809,7 +904,9 @@ Inicio
                                     escreval("         ",pt_fec_esp, pt_abrt_bode_10, pt_fec_esp)
                                     escreval()
                                     
-                                    timer 0
+                                    se (temp = verdadeiro) entao
+                                       timer 0
+                                    fimse
                                  fimse
                                  fimse
 
@@ -826,7 +923,9 @@ Inicio
 
                                  limpatela
 
-                                 timer 120
+                                 se (temp = verdadeiro) entao
+                                    timer 120
+                                 fimse
                                  
                                  escreval("      ",pt_abrt_bode_1, pt_abrt_bode_1, pt_abrt_carro_1)
                                  escreval("      ",pt_abrt_bode_2, pt_abrt_bode_2, pt_abrt_carro_2)
@@ -840,7 +939,9 @@ Inicio
                                  escreval("      ",pt_abrt_bode_10, pt_abrt_bode_10, pt_abrt_carro_10)
                                  escreval()
 
-                                 timer 0
+                                 se (temp = verdadeiro) entao
+                                    timer 0
+                                 fimse
                                  
                                  se (port_alt_two = "sim") ou (port_alt_two = "SIM") ou (port_alt_two = "Sim") entao
                                     escreval("*PORTA ESCOLHIDA: Nº", aux,"*")
