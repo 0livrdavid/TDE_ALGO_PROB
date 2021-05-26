@@ -227,41 +227,54 @@ Inicio
         escreval("          ",notepad[6], notepad[6], notepad[6])
         escreval()
         
-        se (temp = verdadeiro) entao
-           timer 0
-        fimse
+        timer 0
         
-        // fim da apresentasentação e hora de escolha da porta
-        escolha(num_one_car) // permite que dependendo de qual porta o carro esteja seja realizado aï¿½ï¿½es distintas
+        escreval("Escolha uma das portas: ")
+        leia(port_alt_one)
+
+        se (port_alt_one <> port) entao // se o número da porta escolhida for diferente da porta do carro
+           repita
+                 aleatorio 1,3
+                 leia(num_two) // define onde o bode ficará
+                 aleatorio off
+
+                 limpatela
+           ate (port_alt_one <> port) e (port_alt_one <> num_two) e (port <> num_two)// permitir escolher um número diferente da onde a porta com o carro está e uma porta diferente da escolhida
+
+           repita
+                 aleatorio 1,3
+                 leia(port_alt_lock)
+                 aleatorio off
+
+                 limpatela
+           ate (port_alt_lock <> port_alt_one) e (port_alt_lock <> num_two) // permite que a porta fechada mostrada para troca seja diferente da escolha e diferente da porta do carro
+        senao
+             se (port_alt_one = port) entao // se o número da porta escolhida for o mesmo da porta do carro
+                repita
+                      aleatorio 1,3
+                      leia(num_two) // define onde o bode ficará
+                      aleatorio off
+
+                      limpatela
+                ate (port_alt_one <> num_two) e (port <> num_two) // permitir escolher um número diferente da onde a porta com o carro está e uma porta diferente da escolhida
+                
+                repita
+                      aleatorio 1,3
+                      leia(port_alt_lock)
+                      aleatorio off
+                      
+                      limpatela
+                ate (port_alt_lock <> port_alt_one) e (num_two <> port_alt_lock) // permite que a porta fechada mostrada para troca seja diferente da escolha e diferente da porta do carro
+        fimse
+        fimse
+         
+        // fim da apresentação e hora de escolha da porta
+        escolha(num_one_car) // permite que dependendo de qual porta o carro esteja seja realizado ações distintas
                     caso 1
-                         port <- 1
-
-                         escreval("Escolha uma das portas: ")
-                         escreva("-> ")
-                         leia(port_alt_one)
-                         
                          se (port_alt_one <> port) entao //se o número da porta escolhida for diferente da porta do carro
-                            repita
-                                  aleatorio 1,3
-                                  leia(num_two)
-                                  aleatorio off
-                               
-                                  limpatela
-                            ate (port_alt_one <> port) e (port_alt_one <> num_two) e (port <> num_two) // permitir escolher um nï¿½mero diferente da onde a porta com o carro estï¿½ e uma porta diferente da escolhida
-
-                            repita
-                                  aleatorio 1,3
-                                  leia(port_alt_lock)
-                                  aleatorio off
-
-                                  limpatela
-                            ate (port_alt_one <> port_alt_lock) e (num_two <> port_alt_lock)
-
                             se (num_two = 3) entao
-                               se (temp = verdadeiro) entao
-                                  timer 120
-                               fimse
-
+                               timer 120
+                               
                                escreval("         ",notepad[1], notepad[1], notepad[8])
                                escreval("         ",notepad[2], notepad[2], notepad[9])
                                escreval("         ",notepad[2], notepad[2], notepad[10])
@@ -357,11 +370,9 @@ Inicio
                                  limpatela
                                  
                                  se (num_three % 2 = 0) entao
-                                    num_two <- 2
                                     aux <- 3
                                  senao
                                       se (num_three % 2 <> 0) entao
-                                         num_two <- 3
                                          aux <- 2
                                  fimse
                                  fimse
@@ -463,28 +474,7 @@ Inicio
                          fimse
                          
                     caso 2
-                         port <- 2
-
-                         escreval("Escolha uma das portas: ")
-                         leia(port_alt_one)
-
-                         se (port_alt_one <> port) entao //se o nï¿½mero da porta escolhida for diferente da porta do carro
-                            repita
-                                  aleatorio 1,3
-                                  leia(num_two)
-                                  aleatorio off
-
-                                  limpatela
-                            ate (port_alt_one <> port) e (port_alt_one <> num_two) e (port <> num_two) // permitir escolher um nï¿½mero diferente da onde a porta com o carro estï¿½ e uma porta diferente da escolhida
-
-                            repita
-                                  aleatorio 1,3
-                                  leia(port_alt_lock)
-                                  aleatorio off
-
-                                  limpatela
-                            ate (port_alt_one <> port_alt_lock) e (num_two <> port_alt_lock)
-
+                         se (port_alt_one <> port) entao //se o número da porta escolhida for diferente da porta do carro
                             se (num_two = 1) entao
                                se (temp = verdadeiro) entao
                                   timer 120
@@ -586,11 +576,9 @@ Inicio
                                  limpatela
 
                                  se (num_three % 2 = 0) entao
-                                    num_two <- 1
                                     aux <- 3
                                  senao
                                       se (num_three % 2 <> 0) entao
-                                         num_two <- 3
                                          aux <- 2
                                  fimse
                                  fimse
@@ -692,28 +680,7 @@ Inicio
                          fimse
 
                     caso 3
-                         port <- 3
-
-                         escreval("Escolha uma das portas: ")
-                         leia(port_alt_one)
-
-                         se (port_alt_one <> port) entao //se o nï¿½mero da porta escolhida for diferente da porta do carro
-                            repita
-                                  aleatorio 1,3
-                                  leia(num_two)
-                                  aleatorio off
-
-                                  limpatela
-                            ate (port_alt_one <> port) e (port_alt_one <> num_two) e (port <> num_two) // permitir escolher um nï¿½mero diferente da onde a porta com o carro estï¿½ e uma porta diferente da escolhida
-
-                            repita
-                                  aleatorio 1,3
-                                  leia(port_alt_lock)
-                                  aleatorio off
-
-                                  limpatela
-                            ate (port_alt_one <> port_alt_lock) e (num_two <> port_alt_lock)
-
+                         se (port_alt_one <> port) entao //se o número da porta escolhida for diferente da porta do carro
                             se (num_two = 1) entao
                                se (temp = verdadeiro) entao
                                   timer 120
