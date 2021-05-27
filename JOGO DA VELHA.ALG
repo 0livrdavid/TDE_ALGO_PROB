@@ -21,15 +21,15 @@ Inicio
         form_2 <- "  |  "
         form_3 <- "  |  "
         
-        x1 <- "A"
-        x2 <- "B"
-        x3 <- "C"
-        x4 <- "D"
-        x5 <- "E"
-        x6 <- "F"
-        x7 <- "G"
-        x8 <- "H"
-        x9 <- "I"
+        x1 <- "1"
+        x2 <- "2"
+        x3 <- "3"
+        x4 <- "4"
+        x5 <- "5"
+        x6 <- "6"
+        x7 <- "7"
+        x8 <- "8"
+        x9 <- "9"
         
         escreval("  ",x1,form_2,x2,form_3,x3)
         escreval(form_1)
@@ -42,23 +42,23 @@ Inicio
         leia(j1)
 
         escolha j1
-                caso "A"
+                caso "1"
                      x1 <- op1
-                caso "B"
+                caso "2"
                      x2 <- op1
-                caso "C"
+                caso "3"
                      x3 <- op1
-                caso "D"
+                caso "4"
                      x4 <- op1
-                caso "E"
+                caso "5"
                      x5 <- op1
-                caso "F"
+                caso "6"
                      x6 <- op1
-                caso "G"
+                caso "7"
                      x7 <- op1
-                caso "H"
+                caso "8"
                      x8 <- op1
-                caso "I"
+                caso "9"
                      x9 <- op1
         fimescolha
 
@@ -75,23 +75,23 @@ Inicio
         leia(j2)
 
         escolha j2
-                caso "A"
+                caso "1"
                      x1 <- op2
-                caso "B"
+                caso "2"
                      x2 <- op2
-                caso "C"
+                caso "3"
                      x3 <- op2
-                caso "D"
+                caso "4"
                      x4 <- op2
-                caso "E"
+                caso "5"
                      x5 <- op2
-                caso "F"
+                caso "6"
                      x6 <- op2
-                caso "G"
+                caso "7"
                      x7 <- op2
-                caso "H"
+                caso "8"
                      x8 <- op2
-                caso "I"
+                caso "9"
                      x9 <- op2
         fimescolha
 
@@ -108,23 +108,23 @@ Inicio
         leia(j3)
 
         escolha j3
-                caso "A"
+                caso "1"
                      x1 <- op1
-                caso "B"
+                caso "2"
                      x2 <- op1
-                caso "C"
+                caso "3"
                      x3 <- op1
-                caso "D"
+                caso "4"
                      x4 <- op1
-                caso "E"
+                caso "5"
                      x5 <- op1
-                caso "F"
+                caso "6"
                      x6 <- op1
-                caso "G"
+                caso "7"
                      x7 <- op1
-                caso "H"
+                caso "8"
                      x8 <- op1
-                caso "I"
+                caso "9"
                      x9 <- op1
         fimescolha
 
@@ -141,23 +141,23 @@ Inicio
         leia(j4)
 
         escolha j4
-                caso "A"
+                caso "1"
                      x1 <- op2
-                caso "B"
+                caso "2"
                      x2 <- op2
-                caso "C"
+                caso "3"
                      x3 <- op2
-                caso "D"
+                caso "4"
                      x4 <- op2
-                caso "E"
+                caso "5"
                      x5 <- op2
-                caso "F"
+                caso "6"
                      x6 <- op2
-                caso "G"
+                caso "7"
                      x7 <- op2
-                caso "H"
+                caso "8"
                      x8 <- op2
-                caso "I"
+                caso "9"
                      x9 <- op2
         fimescolha
 
@@ -174,23 +174,23 @@ Inicio
         leia(j5)
 
         escolha j5
-                caso "A"
+                caso "1"
                      x1 <- op1
-                caso "B"
+                caso "2"
                      x2 <- op1
-                caso "C"
+                caso "3"
                      x3 <- op1
-                caso "D"
+                caso "4"
                      x4 <- op1
-                caso "E"
+                caso "5"
                      x5 <- op1
-                caso "F"
+                caso "6"
                      x6 <- op1
-                caso "G"
+                caso "7"
                      x7 <- op1
-                caso "H"
+                caso "8"
                      x8 <- op1
-                caso "I"
+                caso "9"
                      x9 <- op1
         fimescolha
                 
@@ -296,23 +296,23 @@ Inicio
         leia(j6)
 
         escolha j6
-                caso "A"
+                caso "1"
                      x1 <- op2
-                caso "B"
+                caso "2"
                      x2 <- op2
-                caso "C"
+                caso "3"
                      x3 <- op2
-                caso "D"
+                caso "4"
                      x4 <- op2
-                caso "E"
+                caso "5"
                      x5 <- op2
-                caso "F"
+                caso "6"
                      x6 <- op2
-                caso "G"
+                caso "7"
                      x7 <- op2
-                caso "H"
+                caso "8"
                      x8 <- op2
-                caso "I"
+                caso "9"
                      x9 <- op2
         fimescolha
 
@@ -412,23 +412,23 @@ Inicio
         leia(j7)
 
         escolha j7
-                caso "A"
+                caso "1"
                      x1 <- op1
-                caso "B"
+                caso "2"
                      x2 <- op1
-                caso "C"
+                caso "3"
                      x3 <- op1
-                caso "D"
+                caso "4"
                      x4 <- op1
-                caso "E"
+                caso "5"
                      x5 <- op1
-                caso "F"
+                caso "6"
                      x6 <- op1
-                caso "G"
+                caso "7"
                      x7 <- op1
-                caso "H"
+                caso "8"
                      x8 <- op1
-                caso "I"
+                caso "9"
                      x9 <- op1
         fimescolha
 
@@ -528,23 +528,23 @@ Inicio
         leia(j8)
 
         escolha j8
-                caso "A"
+                caso "1"
                      x1 <- op2
-                caso "B"
+                caso "2"
                      x2 <- op2
-                caso "C"
+                caso "3"
                      x3 <- op2
-                caso "D"
+                caso "4"
                      x4 <- op2
-                caso "E"
+                caso "5"
                      x5 <- op2
-                caso "F"
+                caso "6"
                      x6 <- op2
-                caso "G"
+                caso "7"
                      x7 <- op2
-                caso "H"
+                caso "8"
                      x8 <- op2
-                caso "I"
+                caso "9"
                      x9 <- op2
         fimescolha
 
@@ -644,23 +644,23 @@ Inicio
         leia(j9)
 
         escolha j9
-                caso "A"
+                caso "1"
                      x1 <- op2
-                caso "B"
+                caso "2"
                      x2 <- op2
-                caso "C"
+                caso "3"
                      x3 <- op2
-                caso "D"
+                caso "4"
                      x4 <- op2
-                caso "E"
+                caso "5"
                      x5 <- op2
-                caso "F"
+                caso "6"
                      x6 <- op2
-                caso "G"
+                caso "7"
                      x7 <- op2
-                caso "H"
+                caso "8"
                      x8 <- op2
-                caso "I"
+                caso "9"
                      x9 <- op2
         fimescolha
         
