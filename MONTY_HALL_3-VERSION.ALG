@@ -12,7 +12,7 @@ Var
         num_one_car, num_two, num_three, num_four, aux: inteiro  // variaveis com valor atribuido aleatoriamente
 
         XS: inteiro
-        notepad_1: vetor[1..55] de caractere
+        notepad: vetor[1..55] de caractere
 
         port: inteiro // porta atribuida ao carro
         port_alt_one: inteiro // primeira escolha da pessoa
@@ -42,13 +42,13 @@ Inicio
 
         limpatela
         
-        escreval("")
-        escreval("")
+        escreval()
+        escreval()
         
         timer 150
         
         para XS de 36 ate 47 faca
-             escreval(notepad_1[XS])
+             escreval(notepad[XS])
         fimpara
         
         timer 2000
@@ -58,7 +58,7 @@ Inicio
         limpatela
         
         para XS de 48 ate 55 faca
-             escreval(notepad_1[XS])
+             escreval(notepad[XS])
         fimpara
         
         escreval("")
@@ -179,14 +179,14 @@ Inicio
         
         timer 100
         
-        escreval("          ",pt_fec_cima, pt_fec_cima, pt_fec_cima)
-        escreval("          ",pt_fec_lado, pt_fec_lado, pt_fec_lado)
-        escreval("          ",pt_fec_lado, pt_fec_lado, pt_fec_lado)
-        escreval("          ",pt_fec_lado, pt_fec_lado, pt_fec_lado)
-        escreval("          ",pt_fec_1, pt_fec_2, pt_fec_3)
-        escreval("          ",pt_fec_lado, pt_fec_lado, pt_fec_lado)
-        escreval("          ",pt_fec_lado, pt_fec_lado, pt_fec_lado)
-        escreval("          ",pt_fec_baixo, pt_fec_baixo, pt_fec_baixo)
+        escreval("          ",notepad[1], notepad[1], notepad[1])
+        escreval("          ",notepad[2], notepad[2], notepad[2])
+        escreval("          ",notepad[2], notepad[2], notepad[2])
+        escreval("          ",notepad[2], notepad[2], notepad[2])
+        escreval("          ",notepad[3], notepad[4], notepad[5])
+        escreval("          ",notepad[2], notepad[2], notepad[2])
+        escreval("          ",notepad[2], notepad[2], notepad[2])
+        escreval("          ",notepad[6], notepad[6], notepad[6])
         escreval()
         
         timer 0
@@ -237,33 +237,33 @@ Inicio
                             se (num_two = 3) entao
                                timer 120
                                
-                               escreval("         ",pt_fec_cima, pt_fec_cima, pt_abrt_bode_1)
-                               escreval("         ",pt_fec_lado, pt_fec_lado, pt_abrt_bode_2)
-                               escreval("         ",pt_fec_lado, pt_fec_lado, pt_abrt_bode_3)
-                               escreval("         ",pt_fec_lado, pt_fec_lado, pt_abrt_bode_4)
-                               escreval("         ",pt_fec_1, pt_fec_2, pt_abrt_bode_5)
-                               escreval("         ",pt_fec_lado, pt_fec_lado, pt_abrt_bode_6)
-                               escreval("         ",pt_fec_lado, pt_fec_lado, pt_abrt_bode_7)
-                               escreval("         ",pt_fec_baixo, pt_fec_baixo, pt_abrt_bode_8)
-                               escreval("         ",pt_fec_esp, pt_fec_esp, pt_abrt_bode_9)
-                               escreval("         ",pt_fec_esp, pt_fec_esp, pt_abrt_bode_10)
+                               escreval("         ",notepad[1], notepad[1], notepad[8])
+                               escreval("         ",notepad[2], notepad[2], notepad[9])
+                               escreval("         ",notepad[2], notepad[2], notepad[10])
+                               escreval("         ",notepad[2], notepad[2], notepad[11])
+                               escreval("         ",notepad[3], notepad[4], notepad[12])
+                               escreval("         ",notepad[2], notepad[2], notepad[13])
+                               escreval("         ",notepad[2], notepad[2], notepad[14])
+                               escreval("         ",notepad[6], notepad[6], notepad[15])
+                               escreval("         ",notepad[7], notepad[7], notepad[16])
+                               escreval("         ",notepad[7], notepad[7], notepad[17])
                                escreval()
                                
                                timer 0
                             senao
                                  se (num_two = 2) entao
                                     timer 120
-
-                                    escreval("         ",pt_fec_cima, pt_abrt_bode_1, pt_fec_cima)
-                                    escreval("         ",pt_fec_lado, pt_abrt_bode_2, pt_fec_lado)
-                                    escreval("         ",pt_fec_lado, pt_abrt_bode_3, pt_fec_lado)
-                                    escreval("         ",pt_fec_lado, pt_abrt_bode_4, pt_fec_lado)
-                                    escreval("         ",pt_fec_1, pt_abrt_bode_5, pt_fec_3)
-                                    escreval("         ",pt_fec_lado, pt_abrt_bode_6, pt_fec_lado)
-                                    escreval("         ",pt_fec_lado, pt_abrt_bode_7, pt_fec_lado)
-                                    escreval("         ",pt_fec_baixo, pt_abrt_bode_8, pt_fec_baixo)
-                                    escreval("         ",pt_fec_esp, pt_abrt_bode_9, pt_fec_esp)
-                                    escreval("         ",pt_fec_esp, pt_abrt_bode_10, pt_fec_esp)
+                                                                        
+                                    escreval("         ",notepad[1], notepad[8], notepad[1])
+                                    escreval("         ",notepad[2], notepad[9], notepad[2])
+                                    escreval("         ",notepad[2], notepad[10], notepad[2])
+                                    escreval("         ",notepad[2], notepad[11], notepad[2])
+                                    escreval("         ",notepad[3], notepad[12], notepad[5])
+                                    escreval("         ",notepad[2], notepad[13], notepad[2])
+                                    escreval("         ",notepad[2], notepad[14], notepad[2])
+                                    escreval("         ",notepad[6], notepad[15], notepad[6])
+                                    escreval("         ",notepad[7], notepad[16], notepad[7])
+                                    escreval("         ",notepad[7], notepad[17], notepad[7])
                                     escreval()
                                     
                                     timer 0
@@ -285,16 +285,16 @@ Inicio
 
                             timer 120
 
-                            escreval("      ",pt_abrt_carro_1, pt_abrt_bode_1, pt_abrt_bode_1)
-                            escreval("      ",pt_abrt_carro_2, pt_abrt_bode_2, pt_abrt_bode_2)
-                            escreval("      ",pt_abrt_carro_3, pt_abrt_bode_3, pt_abrt_bode_3)
-                            escreval("      ",pt_abrt_carro_4, pt_abrt_bode_4, pt_abrt_bode_4)
-                            escreval("      ",pt_abrt_carro_5, pt_abrt_bode_5, pt_abrt_bode_5)
-                            escreval("      ",pt_abrt_carro_6, pt_abrt_bode_6, pt_abrt_bode_6)
-                            escreval("      ",pt_abrt_carro_7, pt_abrt_bode_7, pt_abrt_bode_7)
-                            escreval("      ",pt_abrt_carro_8, pt_abrt_bode_8, pt_abrt_bode_8)
-                            escreval("      ",pt_abrt_carro_9, pt_abrt_bode_9, pt_abrt_bode_9)
-                            escreval("      ",pt_abrt_carro_10, pt_abrt_bode_10, pt_abrt_bode_10)
+                            escreval("      ",notepad[18], notepad[8], notepad[8])
+                            escreval("      ",notepad[19], notepad[9], notepad[9])
+                            escreval("      ",notepad[20], notepad[10], notepad[10])
+                            escreval("      ",notepad[21], notepad[11], notepad[11])
+                            escreval("      ",notepad[22], notepad[12], notepad[12])
+                            escreval("      ",notepad[23], notepad[13], notepad[13])
+                            escreval("      ",notepad[24], notepad[14], notepad[14])
+                            escreval("      ",notepad[25], notepad[15], notepad[15])
+                            escreval("      ",notepad[26], notepad[16], notepad[16])
+                            escreval("      ",notepad[27], notepad[17], notepad[17])
                             escreval()
                             
                             timer 0
@@ -333,16 +333,16 @@ Inicio
                                  se (num_two = 3) entao
                                     timer 120
                                     
-                                    escreval("         ",pt_fec_cima, pt_fec_cima, pt_abrt_bode_1)
-                                    escreval("         ",pt_fec_lado, pt_fec_lado, pt_abrt_bode_2)
-                                    escreval("         ",pt_fec_lado, pt_fec_lado, pt_abrt_bode_3)
-                                    escreval("         ",pt_fec_lado, pt_fec_lado, pt_abrt_bode_4)
-                                    escreval("         ",pt_fec_1, pt_fec_2, pt_abrt_bode_5)
-                                    escreval("         ",pt_fec_lado, pt_fec_lado, pt_abrt_bode_6)
-                                    escreval("         ",pt_fec_lado, pt_fec_lado, pt_abrt_bode_7)
-                                    escreval("         ",pt_fec_baixo, pt_fec_baixo, pt_abrt_bode_8)
-                                    escreval("         ",pt_fec_esp, pt_fec_esp, pt_abrt_bode_9)
-                                    escreval("         ",pt_fec_esp, pt_fec_esp, pt_abrt_bode_10)
+                                    escreval("         ",notepad[1], notepad[1], notepad[8])
+                                    escreval("         ",notepad[2], notepad[2], notepad[9])
+                                    escreval("         ",notepad[2], notepad[2], notepad[10])
+                                    escreval("         ",notepad[2], notepad[2], notepad[11])
+                                    escreval("         ",notepad[3], notepad[4], notepad[12])
+                                    escreval("         ",notepad[2], notepad[2], notepad[13])
+                                    escreval("         ",notepad[2], notepad[2], notepad[14])
+                                    escreval("         ",notepad[6], notepad[6], notepad[15])
+                                    escreval("         ",notepad[7], notepad[7], notepad[16])
+                                    escreval("         ",notepad[7], notepad[7], notepad[17])
                                     escreval()
                                     
                                     timer 0
@@ -350,16 +350,16 @@ Inicio
                                  se (num_two = 2) entao
                                     timer 120
                                     
-                                    escreval("         ",pt_fec_cima, pt_abrt_bode_1, pt_fec_cima)
-                                    escreval("         ",pt_fec_lado, pt_abrt_bode_2, pt_fec_lado)
-                                    escreval("         ",pt_fec_lado, pt_abrt_bode_3, pt_fec_lado)
-                                    escreval("         ",pt_fec_lado, pt_abrt_bode_4, pt_fec_lado)
-                                    escreval("         ",pt_fec_1, pt_abrt_bode_5, pt_fec_3)
-                                    escreval("         ",pt_fec_lado, pt_abrt_bode_6, pt_fec_lado)
-                                    escreval("         ",pt_fec_lado, pt_abrt_bode_7, pt_fec_lado)
-                                    escreval("         ",pt_fec_baixo, pt_abrt_bode_8, pt_fec_baixo)
-                                    escreval("         ",pt_fec_esp, pt_abrt_bode_9, pt_fec_esp)
-                                    escreval("         ",pt_fec_esp, pt_abrt_bode_10, pt_fec_esp)
+                                    escreval("         ",notepad[1], notepad[8], notepad[1])
+                                    escreval("         ",notepad[2], notepad[9], notepad[2])
+                                    escreval("         ",notepad[2], notepad[10], notepad[2])
+                                    escreval("         ",notepad[2], notepad[11], notepad[2])
+                                    escreval("         ",notepad[3], notepad[12], notepad[5])
+                                    escreval("         ",notepad[2], notepad[13], notepad[2])
+                                    escreval("         ",notepad[2], notepad[14], notepad[2])
+                                    escreval("         ",notepad[6], notepad[15], notepad[6])
+                                    escreval("         ",notepad[7], notepad[16], notepad[7])
+                                    escreval("         ",notepad[7], notepad[17], notepad[7])
                                     escreval()
                                     
                                     timer 0
@@ -381,16 +381,16 @@ Inicio
                                  
                                  timer 120
                                  
-                                 escreval("      ",pt_abrt_carro_1, pt_abrt_bode_1, pt_abrt_bode_1)
-                                 escreval("      ",pt_abrt_carro_2, pt_abrt_bode_2, pt_abrt_bode_2)
-                                 escreval("      ",pt_abrt_carro_3, pt_abrt_bode_3, pt_abrt_bode_3)
-                                 escreval("      ",pt_abrt_carro_4, pt_abrt_bode_4, pt_abrt_bode_4)
-                                 escreval("      ",pt_abrt_carro_5, pt_abrt_bode_5, pt_abrt_bode_5)
-                                 escreval("      ",pt_abrt_carro_6, pt_abrt_bode_6, pt_abrt_bode_6)
-                                 escreval("      ",pt_abrt_carro_7, pt_abrt_bode_7, pt_abrt_bode_7)
-                                 escreval("      ",pt_abrt_carro_8, pt_abrt_bode_8, pt_abrt_bode_8)
-                                 escreval("      ",pt_abrt_carro_9, pt_abrt_bode_9, pt_abrt_bode_9)
-                                 escreval("      ",pt_abrt_carro_10, pt_abrt_bode_10, pt_abrt_bode_10)
+                                 escreval("      ",notepad[18], notepad[8], notepad[8])
+                                 escreval("      ",notepad[19], notepad[9], notepad[9])
+                                 escreval("      ",notepad[20], notepad[10], notepad[10])
+                                 escreval("      ",notepad[21], notepad[11], notepad[11])
+                                 escreval("      ",notepad[22], notepad[12], notepad[12])
+                                 escreval("      ",notepad[23], notepad[13], notepad[13])
+                                 escreval("      ",notepad[24], notepad[14], notepad[14])
+                                 escreval("      ",notepad[25], notepad[15], notepad[15])
+                                 escreval("      ",notepad[26], notepad[16], notepad[16])
+                                 escreval("      ",notepad[27], notepad[17], notepad[17])
                                  escreval()
 
                                  timer 0
@@ -419,16 +419,16 @@ Inicio
                             se (num_two = 1) entao
                                timer 120
                                
-                               escreval("         ",pt_abrt_bode_1, pt_fec_cima, pt_fec_cima)
-                               escreval("         ",pt_abrt_bode_2, pt_fec_lado, pt_fec_lado)
-                               escreval("         ",pt_abrt_bode_3, pt_fec_lado, pt_fec_lado)
-                               escreval("         ",pt_abrt_bode_4, pt_fec_lado, pt_fec_lado)
-                               escreval("         ",pt_abrt_bode_5, pt_fec_2, pt_fec_3)
-                               escreval("         ",pt_abrt_bode_6, pt_fec_lado, pt_fec_lado)
-                               escreval("         ",pt_abrt_bode_7, pt_fec_lado, pt_fec_lado)
-                               escreval("         ",pt_abrt_bode_8, pt_fec_baixo, pt_fec_baixo)
-                               escreval("         ",pt_abrt_bode_9, pt_fec_esp, pt_fec_esp)
-                               escreval("         ",pt_abrt_bode_10, pt_fec_esp, pt_fec_esp)
+                               escreval("         ",notepad[8], notepad[1], notepad[1])
+                               escreval("         ",notepad[9], notepad[2], notepad[2])
+                               escreval("         ",notepad[10], notepad[2], notepad[2])
+                               escreval("         ",notepad[11], notepad[2], notepad[2])
+                               escreval("         ",notepad[12], notepad[4], notepad[5])
+                               escreval("         ",notepad[13], notepad[2], notepad[2])
+                               escreval("         ",notepad[14], notepad[2], notepad[2])
+                               escreval("         ",notepad[15], notepad[6], notepad[6])
+                               escreval("         ",notepad[16], notepad[7], notepad[7])
+                               escreval("         ",notepad[17], notepad[7], notepad[7])
                                escreval()
                                
                                timer 0
@@ -436,16 +436,16 @@ Inicio
                                  se (num_two = 3) entao
                                     timer 120
                                     
-                                    escreval("         ",pt_fec_cima, pt_fec_cima, pt_abrt_bode_1)
-                                    escreval("         ",pt_fec_lado, pt_fec_lado, pt_abrt_bode_2)
-                                    escreval("         ",pt_fec_lado, pt_fec_lado, pt_abrt_bode_3)
-                                    escreval("         ",pt_fec_lado, pt_fec_lado, pt_abrt_bode_4)
-                                    escreval("         ",pt_fec_1, pt_fec_2, pt_abrt_bode_5)
-                                    escreval("         ",pt_fec_lado, pt_fec_lado, pt_abrt_bode_6)
-                                    escreval("         ",pt_fec_lado, pt_fec_lado, pt_abrt_bode_7)
-                                    escreval("         ",pt_fec_baixo, pt_fec_baixo, pt_abrt_bode_8)
-                                    escreval("         ",pt_fec_esp, pt_fec_esp, pt_abrt_bode_9)
-                                    escreval("         ",pt_fec_esp, pt_fec_esp, pt_abrt_bode_10)
+                                    escreval("         ",notepad[1], notepad[1], notepad[8])
+                                    escreval("         ",notepad[2], notepad[2], notepad[9])
+                                    escreval("         ",notepad[2], notepad[2], notepad[10])
+                                    escreval("         ",notepad[2], notepad[2], notepad[11])
+                                    escreval("         ",notepad[3], notepad[4], notepad[12])
+                                    escreval("         ",notepad[2], notepad[2], notepad[13])
+                                    escreval("         ",notepad[2], notepad[2], notepad[14])
+                                    escreval("         ",notepad[6], notepad[6], notepad[15])
+                                    escreval("         ",notepad[7], notepad[7], notepad[16])
+                                    escreval("         ",notepad[7], notepad[7], notepad[17])
                                     escreval()
                                     
                                     timer 0
@@ -467,16 +467,16 @@ Inicio
 
                             timer 120
                             
-                            escreval("      ",pt_abrt_bode_1, pt_abrt_carro_1, pt_abrt_bode_1)
-                            escreval("      ",pt_abrt_bode_2, pt_abrt_carro_2, pt_abrt_bode_2)
-                            escreval("      ",pt_abrt_bode_3, pt_abrt_carro_3, pt_abrt_bode_3)
-                            escreval("      ",pt_abrt_bode_4, pt_abrt_carro_4, pt_abrt_bode_4)
-                            escreval("      ",pt_abrt_bode_5, pt_abrt_carro_5, pt_abrt_bode_5)
-                            escreval("      ",pt_abrt_bode_6, pt_abrt_carro_6, pt_abrt_bode_6)
-                            escreval("      ",pt_abrt_bode_7, pt_abrt_carro_7, pt_abrt_bode_7)
-                            escreval("      ",pt_abrt_bode_8, pt_abrt_carro_8, pt_abrt_bode_8)
-                            escreval("      ",pt_abrt_bode_9, pt_abrt_carro_9, pt_abrt_bode_9)
-                            escreval("      ",pt_abrt_bode_10, pt_abrt_carro_10, pt_abrt_bode_10)
+                            escreval("      ",notepad[8], notepad[18], notepad[8])
+                            escreval("      ",notepad[9], notepad[19], notepad[9])
+                            escreval("      ",notepad[10], notepad[20], notepad[10])
+                            escreval("      ",notepad[11], notepad[21], notepad[11])
+                            escreval("      ",notepad[12], notepad[22], notepad[12])
+                            escreval("      ",notepad[13], notepad[23], notepad[13])
+                            escreval("      ",notepad[14], notepad[24], notepad[14])
+                            escreval("      ",notepad[15], notepad[25], notepad[15])
+                            escreval("      ",notepad[16], notepad[26], notepad[16])
+                            escreval("      ",notepad[17], notepad[27], notepad[17])
                             escreval()
 
                             timer 0
@@ -515,16 +515,16 @@ Inicio
                                  se (num_two = 3) entao
                                     timer 120
                                     
-                                    escreval("         ",pt_fec_cima, pt_fec_cima, pt_abrt_bode_1)
-                                    escreval("         ",pt_fec_lado, pt_fec_lado, pt_abrt_bode_2)
-                                    escreval("         ",pt_fec_lado, pt_fec_lado, pt_abrt_bode_3)
-                                    escreval("         ",pt_fec_lado, pt_fec_lado, pt_abrt_bode_4)
-                                    escreval("         ",pt_fec_1, pt_fec_2, pt_abrt_bode_5)
-                                    escreval("         ",pt_fec_lado, pt_fec_lado, pt_abrt_bode_6)
-                                    escreval("         ",pt_fec_lado, pt_fec_lado, pt_abrt_bode_7)
-                                    escreval("         ",pt_fec_baixo, pt_fec_baixo, pt_abrt_bode_8)
-                                    escreval("         ",pt_fec_esp, pt_fec_esp, pt_abrt_bode_9)
-                                    escreval("         ",pt_fec_esp, pt_fec_esp, pt_abrt_bode_10)
+                                    escreval("         ",notepad[1], notepad[1], notepad[8])
+                                    escreval("         ",notepad[2], notepad[2], notepad[9])
+                                    escreval("         ",notepad[2], notepad[2], notepad[10])
+                                    escreval("         ",notepad[2], notepad[2], notepad[11])
+                                    escreval("         ",notepad[3], notepad[4], notepad[12])
+                                    escreval("         ",notepad[2], notepad[2], notepad[13])
+                                    escreval("         ",notepad[2], notepad[2], notepad[14])
+                                    escreval("         ",notepad[6], notepad[6], notepad[15])
+                                    escreval("         ",notepad[7], notepad[7], notepad[16])
+                                    escreval("         ",notepad[7], notepad[7], notepad[17])
                                     escreval()
                                     
                                     timer 0
@@ -532,16 +532,16 @@ Inicio
                                  se (num_two = 1) entao
                                     timer 120
                                     
-                                    escreval("         ",pt_abrt_bode_1, pt_fec_cima, pt_fec_cima)
-                                    escreval("         ",pt_abrt_bode_2, pt_fec_lado, pt_fec_lado)
-                                    escreval("         ",pt_abrt_bode_3, pt_fec_lado, pt_fec_lado)
-                                    escreval("         ",pt_abrt_bode_4, pt_fec_lado, pt_fec_lado)
-                                    escreval("         ",pt_abrt_bode_5, pt_fec_2, pt_fec_3)
-                                    escreval("         ",pt_abrt_bode_6, pt_fec_lado, pt_fec_lado)
-                                    escreval("         ",pt_abrt_bode_7, pt_fec_lado, pt_fec_lado)
-                                    escreval("         ",pt_abrt_bode_8, pt_fec_baixo, pt_fec_baixo)
-                                    escreval("         ",pt_abrt_bode_9, pt_fec_esp, pt_fec_esp)
-                                    escreval("         ",pt_abrt_bode_10, pt_fec_esp, pt_fec_esp)
+                                    escreval("         ",notepad[8], notepad[1], notepad[1])
+                                    escreval("         ",notepad[9], notepad[2], notepad[2])
+                                    escreval("         ",notepad[10], notepad[2], notepad[2])
+                                    escreval("         ",notepad[11], notepad[2], notepad[2])
+                                    escreval("         ",notepad[12], notepad[4], notepad[5])
+                                    escreval("         ",notepad[13], notepad[2], notepad[2])
+                                    escreval("         ",notepad[14], notepad[2], notepad[2])
+                                    escreval("         ",notepad[15], notepad[6], notepad[6])
+                                    escreval("         ",notepad[16], notepad[7], notepad[7])
+                                    escreval("         ",notepad[17], notepad[7], notepad[7])
                                     escreval()
                                     
                                     timer 0
@@ -563,16 +563,16 @@ Inicio
 
                                  timer 120
                                  
-                                 escreval("      ",pt_abrt_bode_1, pt_abrt_carro_1, pt_abrt_bode_1)
-                                 escreval("      ",pt_abrt_bode_2, pt_abrt_carro_2, pt_abrt_bode_2)
-                                 escreval("      ",pt_abrt_bode_3, pt_abrt_carro_3, pt_abrt_bode_3)
-                                 escreval("      ",pt_abrt_bode_4, pt_abrt_carro_4, pt_abrt_bode_4)
-                                 escreval("      ",pt_abrt_bode_5, pt_abrt_carro_5, pt_abrt_bode_5)
-                                 escreval("      ",pt_abrt_bode_6, pt_abrt_carro_6, pt_abrt_bode_6)
-                                 escreval("      ",pt_abrt_bode_7, pt_abrt_carro_7, pt_abrt_bode_7)
-                                 escreval("      ",pt_abrt_bode_8, pt_abrt_carro_8, pt_abrt_bode_8)
-                                 escreval("      ",pt_abrt_bode_9, pt_abrt_carro_9, pt_abrt_bode_9)
-                                 escreval("      ",pt_abrt_bode_10, pt_abrt_carro_10, pt_abrt_bode_10)
+                                 escreval("      ",notepad[8], notepad[18], notepad[8])
+                                 escreval("      ",notepad[9], notepad[19], notepad[9])
+                                 escreval("      ",notepad[10], notepad[20], notepad[10])
+                                 escreval("      ",notepad[11], notepad[21], notepad[11])
+                                 escreval("      ",notepad[12], notepad[22], notepad[12])
+                                 escreval("      ",notepad[13], notepad[23], notepad[13])
+                                 escreval("      ",notepad[14], notepad[24], notepad[14])
+                                 escreval("      ",notepad[15], notepad[25], notepad[15])
+                                 escreval("      ",notepad[16], notepad[26], notepad[16])
+                                 escreval("      ",notepad[17], notepad[27], notepad[17])
                                  escreval()
 
                                  timer 0
@@ -601,16 +601,16 @@ Inicio
                             se (num_two = 1) entao
                                timer 120
                                
-                               escreval("         ",pt_abrt_bode_1, pt_fec_cima, pt_fec_cima)
-                               escreval("         ",pt_abrt_bode_2, pt_fec_lado, pt_fec_lado)
-                               escreval("         ",pt_abrt_bode_3, pt_fec_lado, pt_fec_lado)
-                               escreval("         ",pt_abrt_bode_4, pt_fec_lado, pt_fec_lado)
-                               escreval("         ",pt_abrt_bode_5, pt_fec_2, pt_fec_3)
-                               escreval("         ",pt_abrt_bode_6, pt_fec_lado, pt_fec_lado)
-                               escreval("         ",pt_abrt_bode_7, pt_fec_lado, pt_fec_lado)
-                               escreval("         ",pt_abrt_bode_8, pt_fec_baixo, pt_fec_baixo)
-                               escreval("         ",pt_abrt_bode_9, pt_fec_esp, pt_fec_esp)
-                               escreval("         ",pt_abrt_bode_10, pt_fec_esp, pt_fec_esp)
+                               escreval("         ",notepad[8], notepad[1], notepad[1])
+                               escreval("         ",notepad[9], notepad[2], notepad[2])
+                               escreval("         ",notepad[10], notepad[2], notepad[2])
+                               escreval("         ",notepad[11], notepad[2], notepad[2])
+                               escreval("         ",notepad[12], notepad[4], notepad[5])
+                               escreval("         ",notepad[13], notepad[2], notepad[2])
+                               escreval("         ",notepad[14], notepad[2], notepad[2])
+                               escreval("         ",notepad[15], notepad[6], notepad[6])
+                               escreval("         ",notepad[16], notepad[7], notepad[7])
+                               escreval("         ",notepad[17], notepad[7], notepad[7])
                                escreval()
                                
                                timer 0
@@ -618,16 +618,16 @@ Inicio
                                  se (num_two = 2) entao
                                     timer 120
                                     
-                                    escreval("         ",pt_fec_cima, pt_abrt_bode_1, pt_fec_cima)
-                                    escreval("         ",pt_fec_lado, pt_abrt_bode_2, pt_fec_lado)
-                                    escreval("         ",pt_fec_lado, pt_abrt_bode_3, pt_fec_lado)
-                                    escreval("         ",pt_fec_lado, pt_abrt_bode_4, pt_fec_lado)
-                                    escreval("         ",pt_fec_1, pt_abrt_bode_5, pt_fec_3)
-                                    escreval("         ",pt_fec_lado, pt_abrt_bode_6, pt_fec_lado)
-                                    escreval("         ",pt_fec_lado, pt_abrt_bode_7, pt_fec_lado)
-                                    escreval("         ",pt_fec_baixo, pt_abrt_bode_8, pt_fec_baixo)
-                                    escreval("         ",pt_fec_esp, pt_abrt_bode_9, pt_fec_esp)
-                                    escreval("         ",pt_fec_esp, pt_abrt_bode_10, pt_fec_esp)
+                                    escreval("         ",notepad[1], notepad[8], notepad[1])
+                                    escreval("         ",notepad[2], notepad[9], notepad[2])
+                                    escreval("         ",notepad[2], notepad[10], notepad[2])
+                                    escreval("         ",notepad[2], notepad[11], notepad[2])
+                                    escreval("         ",notepad[3], notepad[12], notepad[5])
+                                    escreval("         ",notepad[2], notepad[13], notepad[2])
+                                    escreval("         ",notepad[2], notepad[14], notepad[2])
+                                    escreval("         ",notepad[6], notepad[15], notepad[6])
+                                    escreval("         ",notepad[7], notepad[16], notepad[7])
+                                    escreval("         ",notepad[7], notepad[17], notepad[7])
                                     escreval()
                                     
                                     timer 0
@@ -649,16 +649,16 @@ Inicio
 
                             timer 120
                             
-                            escreval("      ",pt_abrt_bode_1, pt_abrt_bode_1, pt_abrt_carro_1)
-                            escreval("      ",pt_abrt_bode_2, pt_abrt_bode_2, pt_abrt_carro_2)
-                            escreval("      ",pt_abrt_bode_3, pt_abrt_bode_3, pt_abrt_carro_3)
-                            escreval("      ",pt_abrt_bode_4, pt_abrt_bode_4, pt_abrt_carro_4)
-                            escreval("      ",pt_abrt_bode_5, pt_abrt_bode_5, pt_abrt_carro_5)
-                            escreval("      ",pt_abrt_bode_6, pt_abrt_bode_6, pt_abrt_carro_6)
-                            escreval("      ",pt_abrt_bode_7, pt_abrt_bode_7, pt_abrt_carro_7)
-                            escreval("      ",pt_abrt_bode_8, pt_abrt_bode_8, pt_abrt_carro_8)
-                            escreval("      ",pt_abrt_bode_9, pt_abrt_bode_9, pt_abrt_carro_9)
-                            escreval("      ",pt_abrt_bode_10, pt_abrt_bode_10, pt_abrt_carro_10)
+                            escreval("      ",notepad[8], notepad[8], notepad[18])
+                            escreval("      ",notepad[9], notepad[9], notepad[19])
+                            escreval("      ",notepad[10], notepad[10], notepad[20])
+                            escreval("      ",notepad[11], notepad[11], notepad[21])
+                            escreval("      ",notepad[12], notepad[12], notepad[22])
+                            escreval("      ",notepad[13], notepad[13], notepad[23])
+                            escreval("      ",notepad[14], notepad[14], notepad[24])
+                            escreval("      ",notepad[15], notepad[15], notepad[25])
+                            escreval("      ",notepad[16], notepad[16], notepad[26])
+                            escreval("      ",notepad[17], notepad[17], notepad[27])
                             escreval()
 
                             timer 0
@@ -687,9 +687,11 @@ Inicio
                                  limpatela
 
                                  se (num_three % 2 = 0) entao
+                                    num_two <- 2
                                     aux <- 3
                                  senao
                                       se (num_three % 2 <> 0) entao
+                                         num_two <- 1
                                          aux <- 2
                                  fimse
                                  fimse
@@ -697,16 +699,16 @@ Inicio
                                  se (num_two = 1) entao
                                     timer 120
                                     
-                                    escreval("         ",pt_abrt_bode_1, pt_fec_cima, pt_fec_cima)
-                                    escreval("         ",pt_abrt_bode_2, pt_fec_lado, pt_fec_lado)
-                                    escreval("         ",pt_abrt_bode_3, pt_fec_lado, pt_fec_lado)
-                                    escreval("         ",pt_abrt_bode_4, pt_fec_lado, pt_fec_lado)
-                                    escreval("         ",pt_abrt_bode_5, pt_fec_2, pt_fec_3)
-                                    escreval("         ",pt_abrt_bode_6, pt_fec_lado, pt_fec_lado)
-                                    escreval("         ",pt_abrt_bode_7, pt_fec_lado, pt_fec_lado)
-                                    escreval("         ",pt_abrt_bode_8, pt_fec_baixo, pt_fec_baixo)
-                                    escreval("         ",pt_abrt_bode_9, pt_fec_esp, pt_fec_esp)
-                                    escreval("         ",pt_abrt_bode_10, pt_fec_esp, pt_fec_esp)
+                                    escreval("         ",notepad[8], notepad[1], notepad[1])
+                                    escreval("         ",notepad[9], notepad[2], notepad[2])
+                                    escreval("         ",notepad[10], notepad[2], notepad[2])
+                                    escreval("         ",notepad[11], notepad[2], notepad[2])
+                                    escreval("         ",notepad[12], notepad[4], notepad[5])
+                                    escreval("         ",notepad[13], notepad[2], notepad[2])
+                                    escreval("         ",notepad[14], notepad[2], notepad[2])
+                                    escreval("         ",notepad[15], notepad[6], notepad[6])
+                                    escreval("         ",notepad[16], notepad[7], notepad[7])
+                                    escreval("         ",notepad[17], notepad[7], notepad[7])
                                     escreval()
                                     
                                     timer 0
@@ -714,16 +716,16 @@ Inicio
                                  se (num_two = 2) entao
                                     timer 120
                                     
-                                    escreval("         ",pt_fec_cima, pt_abrt_bode_1, pt_fec_cima)
-                                    escreval("         ",pt_fec_lado, pt_abrt_bode_2, pt_fec_lado)
-                                    escreval("         ",pt_fec_lado, pt_abrt_bode_3, pt_fec_lado)
-                                    escreval("         ",pt_fec_lado, pt_abrt_bode_4, pt_fec_lado)
-                                    escreval("         ",pt_fec_1, pt_abrt_bode_5, pt_fec_3)
-                                    escreval("         ",pt_fec_lado, pt_abrt_bode_6, pt_fec_lado)
-                                    escreval("         ",pt_fec_lado, pt_abrt_bode_7, pt_fec_lado)
-                                    escreval("         ",pt_fec_baixo, pt_abrt_bode_8, pt_fec_baixo)
-                                    escreval("         ",pt_fec_esp, pt_abrt_bode_9, pt_fec_esp)
-                                    escreval("         ",pt_fec_esp, pt_abrt_bode_10, pt_fec_esp)
+                                    escreval("         ",notepad[1], notepad[8], notepad[1])
+                                    escreval("         ",notepad[2], notepad[9], notepad[2])
+                                    escreval("         ",notepad[2], notepad[10], notepad[2])
+                                    escreval("         ",notepad[2], notepad[11], notepad[2])
+                                    escreval("         ",notepad[3], notepad[12], notepad[5])
+                                    escreval("         ",notepad[2], notepad[13], notepad[2])
+                                    escreval("         ",notepad[2], notepad[14], notepad[2])
+                                    escreval("         ",notepad[6], notepad[15], notepad[6])
+                                    escreval("         ",notepad[7], notepad[16], notepad[7])
+                                    escreval("         ",notepad[7], notepad[17], notepad[7])
                                     escreval()
                                     
                                     timer 0
@@ -745,16 +747,16 @@ Inicio
 
                                  timer 120
                                  
-                                 escreval("      ",pt_abrt_bode_1, pt_abrt_bode_1, pt_abrt_carro_1)
-                                 escreval("      ",pt_abrt_bode_2, pt_abrt_bode_2, pt_abrt_carro_2)
-                                 escreval("      ",pt_abrt_bode_3, pt_abrt_bode_3, pt_abrt_carro_3)
-                                 escreval("      ",pt_abrt_bode_4, pt_abrt_bode_4, pt_abrt_carro_4)
-                                 escreval("      ",pt_abrt_bode_5, pt_abrt_bode_5, pt_abrt_carro_5)
-                                 escreval("      ",pt_abrt_bode_6, pt_abrt_bode_6, pt_abrt_carro_6)
-                                 escreval("      ",pt_abrt_bode_7, pt_abrt_bode_7, pt_abrt_carro_7)
-                                 escreval("      ",pt_abrt_bode_8, pt_abrt_bode_8, pt_abrt_carro_8)
-                                 escreval("      ",pt_abrt_bode_9, pt_abrt_bode_9, pt_abrt_carro_9)
-                                 escreval("      ",pt_abrt_bode_10, pt_abrt_bode_10, pt_abrt_carro_10)
+                                 escreval("      ",notepad[8], notepad[8], notepad[18])
+                                 escreval("      ",notepad[9], notepad[9], notepad[19])
+                                 escreval("      ",notepad[10], notepad[10], notepad[20])
+                                 escreval("      ",notepad[11], notepad[11], notepad[21])
+                                 escreval("      ",notepad[12], notepad[12], notepad[22])
+                                 escreval("      ",notepad[13], notepad[13], notepad[23])
+                                 escreval("      ",notepad[14], notepad[14], notepad[24])
+                                 escreval("      ",notepad[15], notepad[15], notepad[25])
+                                 escreval("      ",notepad[16], notepad[16], notepad[26])
+                                 escreval("      ",notepad[17], notepad[17], notepad[27])
                                  escreval()
 
                                  timer 0
