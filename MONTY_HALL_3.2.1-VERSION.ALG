@@ -19,8 +19,7 @@ Var
         port_alt_lock: inteiro // porta trancada
         port_alt_two, help: caractere // segunda escolha de porta da pessoa
         
-        temp, apres, temp_logo, aleat_on, aleat_on_geral, hab_inst, easter_egg: logico // valores lógicos que remetem a configuração
-
+        temp, apres, temp_logo, aleat_on, aleat_on_geral, hab_inst: logico // valores lógicos que remetem a configuração
 Inicio
         // CONFIGURAÇÃO:
         // 1_Temporizador está ligado?
@@ -40,8 +39,6 @@ Inicio
         num_two <- 2
         // 8_Habilitar instruções?
         hab_inst <- falso
-        // 9_Habilitar Easter-EGG?
-        easter_egg <- falso
         // end
 
         para XS de 1 ate 55 faca
@@ -242,9 +239,6 @@ Inicio
         
         escreval("Escolha uma das portas: ")
         leia(port_alt_one)
-        
-//se (easter_egg = verdadeiro) entao
-//fimse
 
         se (port_alt_one <> port) entao // se o número da porta escolhida for diferente da porta do carro
            se (aleat_on_geral = verdadeiro) entao
